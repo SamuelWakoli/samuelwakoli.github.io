@@ -45,40 +45,40 @@ const About = () => {
             {/* GitHub Section */}
             <div className="mt-12">
                 <h3 className="text-xl font-bold text-purple-400 mb-4"># GitHub Activity</h3>
-                <div className="p-6 rounded-lg border border-gray-700" style={{ backgroundColor: 'var(--ide-sidebar)' }}>
-                    <div className="flex items-center justify-between mb-4">
+                <div className="p-4 sm:p-6 rounded-lg border border-gray-700" style={{ backgroundColor: 'var(--ide-sidebar)' }}>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
                         <div className="flex items-center gap-3">
                             <img
                                 src="https://avatars.githubusercontent.com/SamuelWakoli"
                                 alt="GitHub Avatar"
-                                className="w-16 h-16 rounded-full border-2 border-purple-500"
+                                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-purple-500"
                             />
                             <div>
-                                <h4 className="text-xl font-bold text-white">SamuelWakoli</h4>
-                                <p className="text-gray-400 text-sm">Full Stack Developer</p>
+                                <h4 className="text-lg sm:text-xl font-bold text-white">SamuelWakoli</h4>
+                                <p className="text-gray-400 text-xs sm:text-sm">Full Stack Developer</p>
                             </div>
                         </div>
                         <a
                             href="https://github.com/SamuelWakoli"
                             target="_blank"
                             rel="noreferrer"
-                            className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-white text-sm transition-colors"
+                            className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-white text-sm transition-colors text-center"
                         >
                             View Profile →
                         </a>
                     </div>
-                    <div className="grid grid-cols-3 gap-4 text-center mt-6">
-                        <a href="https://github.com/SamuelWakoli?tab=repositories" target="_blank" rel="noreferrer" className="p-4 rounded bg-gray-800 hover:bg-gray-700 transition-colors">
-                            <div className="text-2xl font-bold text-green-400">20+</div>
-                            <div className="text-gray-400 text-sm">Repositories</div>
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center mt-6">
+                        <a href="https://github.com/SamuelWakoli?tab=repositories" target="_blank" rel="noreferrer" className="p-2 sm:p-4 rounded bg-gray-800 hover:bg-gray-700 transition-colors">
+                            <div className="text-lg sm:text-2xl font-bold text-green-400">20+</div>
+                            <div className="text-gray-400 text-xs sm:text-sm">Repos</div>
                         </a>
-                        <a href="https://github.com/SamuelWakoli?tab=followers" target="_blank" rel="noreferrer" className="p-4 rounded bg-gray-800 hover:bg-gray-700 transition-colors">
-                            <div className="text-2xl font-bold text-blue-400">50+</div>
-                            <div className="text-gray-400 text-sm">Followers</div>
+                        <a href="https://github.com/SamuelWakoli?tab=followers" target="_blank" rel="noreferrer" className="p-2 sm:p-4 rounded bg-gray-800 hover:bg-gray-700 transition-colors">
+                            <div className="text-lg sm:text-2xl font-bold text-blue-400">50+</div>
+                            <div className="text-gray-400 text-xs sm:text-sm">Followers</div>
                         </a>
-                        <a href="https://github.com/SamuelWakoli?tab=following" target="_blank" rel="noreferrer" className="p-4 rounded bg-gray-800 hover:bg-gray-700 transition-colors">
-                            <div className="text-2xl font-bold text-purple-400">3+</div>
-                            <div className="text-gray-400 text-sm">Years Active</div>
+                        <a href="https://github.com/SamuelWakoli?tab=following" target="_blank" rel="noreferrer" className="p-2 sm:p-4 rounded bg-gray-800 hover:bg-gray-700 transition-colors">
+                            <div className="text-lg sm:text-2xl font-bold text-purple-400">3+</div>
+                            <div className="text-gray-400 text-xs sm:text-sm">Years</div>
                         </a>
                     </div>
                 </div>
