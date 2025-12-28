@@ -4,7 +4,7 @@ import { Briefcase } from 'lucide-react'
 
 export const ExperienceCard = () => {
     return (
-        <Card className="col-span-12 md:col-span-6 lg:col-span-6 row-span-2">
+        <Card className="col-span-12 row-span-2">
             <div className="flex items-center gap-3 mb-8">
                 <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400">
                     <Briefcase size={20} />

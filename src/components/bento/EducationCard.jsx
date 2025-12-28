@@ -19,7 +19,11 @@ export const EducationCard = () => {
                         <h4 className="text-white font-bold text-lg">{edu.school}</h4>
                         <p className="text-blue-200 font-medium mb-1">{edu.degree}</p>
                         <span className="text-slate-500 text-xs font-mono bg-slate-900 px-2 py-0.5 rounded inline-block mb-3">{edu.year}</span>
-                        <p className="text-slate-400 text-sm leading-relaxed">{edu.description}</p>
+                        {edu.description && (
+                            <div className="text-slate-400 text-sm leading-relaxed whitespace-pre-line">
+                                {edu.description}
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
@@ -37,25 +41,27 @@ export const CertificationCard = () => {
                 <h3 className="text-xl font-bold text-white">Certifications</h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
                 {profile.certifications.map((cert, index) => (
-                    <div key={index} className="group relative">
+                    <a
+                        key={index}
+                        href={cert.link}
+                        target="_blank"
+                        className="block group relative p-4 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-purple-500/50 hover:bg-slate-800 transition-all"
+                    >
                         <div className="flex justify-between items-start">
                             <div>
-                                <h4 className="text-slate-200 font-medium group-hover:text-purple-300 transition-colors text-base">{cert.name}</h4>
-                                <p className="text-slate-500 text-xs mt-0.5">{cert.issuer}</p>
+                                <h4 className="text-slate-200 font-bold group-hover:text-purple-300 transition-colors text-lg flex items-center gap-2">
+                                    {cert.name}
+                                    <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                                </h4>
+                                {/* Removed issuer since it's typically part of the name in the resume */}
                             </div>
-                            <span className="text-slate-600 text-xs font-mono">{cert.year}</span>
                         </div>
                         {cert.description && (
-                            <p className="text-slate-400 text-sm mt-2 leading-relaxed">{cert.description}</p>
+                            <p className="text-slate-400 text-sm mt-3 leading-relaxed">{cert.description}</p>
                         )}
-                        {cert.link && cert.link !== "#" && (
-                            <a href={cert.link} target="_blank" className="inline-flex items-center gap-1 text-purple-400/80 text-xs mt-2 hover:text-purple-300 transition-colors">
-                                View Certificate <ExternalLink size={10} />
-                            </a>
-                        )}
-                    </div>
+                    </a>
                 ))}
             </div>
         </Card>

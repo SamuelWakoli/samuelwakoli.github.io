@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState, useRef } from 'react'
 
-export const Card = ({ children, className = '', noPadding = false }) => {
+export const Card = ({ children, className = '', noPadding = false, ...props }) => {
     const divRef = useRef(null)
     const [isFocused, setIsFocused] = useState(false)
     const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -42,6 +42,7 @@ export const Card = ({ children, className = '', noPadding = false }) => {
             onBlur={handleBlur}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            {...props}
             className={`relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/50 backdrop-blur-xl ${className}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -1,0 +1,90 @@
+
+Samuel Wakoli
+Full Stack Developer (Backend Heavy)
+Phone: +254797228948
+Email: swwakoli@gmail.com
+GitHub: https://github.com/samuelwakoli
+LinkedIn: https://www.linkedin.com/in/samuelwakoli
+
+SOCIAL
+LinkedIn: https://www.linkedin.com/in/samuelwakoli/
+Google Play: https://play.google.com/store/apps/dev?id=5163633591987733044
+Google for Developers: https://g.dev/samuelwakoli
+
+PROFILE
+I am a self-taught full-stack software developer with over three years of specialized experience in mobile application development, proficient in Flutter and native Android development using Kotlin as my primary programming language, complemented by expertise in Dart and JavaScript. My technical stack encompasses Jetpack Compose for Android front-end development and Flutter for cross-platform solutions, while leveraging Firebase and Google Cloud Platform for robust back-end infrastructure. I bring a persistent and logical approach to problem-solving, coupled with a commitment to continuous learning and adopting emerging technologies, with the career objective of advancing my expertise while delivering meaningful impact within a dynamic development environment.
+
+TECHNICAL SKILLS
+Languages: Kotlin(Primary), Dart, JavaScript, TypeScript
+Mobile Development: Android Kotlin, Flutter SDK, Kotlin MultiPlatform, Material Design Kit
+Backend Development: Node.js, Google Cloud Platform 
+Version Control: Git
+Command Line & Terminal Skills: Bash, PowerShell
+Cloud Services: Firebase (including Firestore, Authentication, Storage, Firestore, Analytics, etc.), Google Cloud Platform
+Project Documentation: Writerside IDE (XML & Markdown)
+Engineering Practices: Algorithm Design, Unit Testing & Instrumentation Testing
+
+EXPERIENCE
+
+Arkcess Care, Perris, California, United States
+Full Stack Software Developer
+Remote - Full-time
+January 2024—Present 
+Cross-Platform Development: Engineered responsive Flutter applications with unified codebases for web platforms.
+Firebase Integration: Implemented comprehensive backend solutions using Firebase services including Authentication, Firestore, and Cloud Functions to create scalable and secure applications.
+AI Integration: Implemented AI services such as resume summary generation using Google’s Gemini AI developer API on server side, with Node.js.
+Payment Gateway: Integrated Stripe financial services such as invoicing, subscription and one-time checkout. Ensuring secure payment in our web app.
+UI/UX Implementation: Translated wireframes and design mockups into user interfaces using Flutter's widget system and custom animations.
+Technical Leadership: Led architecture planning sessions and provided guidance to fellow developers on Flutter best practices and state management approaches.
+API Development: Designed and implemented RESTful APIs using Node.js and Firebase Cloud Functions to support web client applications.
+Performance Optimization: Conducted code reviews and performance profiling to identify and resolve bottlenecks, improving application load time by 30%.
+User Support Systems: Created in-app feedback mechanisms and analytics integrations to gather user insights and prioritize feature development.
+CI/CD Pipeline Management: Established automated testing and deployment workflows to ensure consistent quality across all application releases.
+
+AnchorMiles, Garden Estate, Thika Road, NRB
+Native Android Developer (Seasonal)
+January 2023—Present 
+Native Android Development: Built feature-rich Android applications using Kotlin and Jetpack Compose, following Material Design principles and MVVM architecture.
+Real-time Data Synchronization: Integrated Firebase Realtime Database and Firestore for seamless offline-first experiences with conflict resolution.
+Compose UI Implementation: Leveraged Jetpack Compose to create modern, declarative user interfaces with custom theming and animations.
+Authentication Systems: Implemented secure multi-factor authentication flows using Firebase Authentication and custom token management.
+Background Processing: Developed efficient background services for data synchronization and push notification handling using WorkManager.
+Code Migration: Successfully migrated legacy XML-based layouts to Jetpack Compose, improving development velocity and code maintainability.
+Analytics Integration: Implemented comprehensive user analytics using Firebase Analytics to track engagement metrics and feature adoption.
+SDK Integration: Seamlessly integrated third-party libraries and payment gateways for enhanced application functionality.
+
+
+EDUCATION
+
+Diploma in Information Technology
+KCA University | Ruaraka, Nairobi 
+September 2021—December 2023
+Relevant Units: 
+DIT 104: Computer organization and architecture
+DIT 305: Programming methodology
+DIT 406: Data structures and algorithms
+DIT 409: Java Programming
+DIT 504: Application programming
+
+
+CERTIFICATIONS
+
+Android Development by Google Africa Developer Training Program: certificate: https://drive.google.com/file/d/1Ba77okpo-5xhgO5wCyBb_EdjLWg1-uWQ/view?usp=sharing
+I have an Android Development certification from Google's training program. I have in-depth knowledge and skills, enabling me to contribute to Android projects efficiently.
+
+Kotlin by Sololearn: certificate: https://www.sololearn.com/certificates/CT-KJJXABZT
+I have got the Kotlin certification from Sololearn, demonstrating my proficiency in this programming language.
+
+SQL by Sololearn: certificate: https://www.sololearn.com/certificates/CT-YXE3R6YH
+I have got a certification in SQL from Sololearn, showcasing my proficiency in this widely used database language.
+
+HTML by Sololearn: certificate: https://www.sololearn.com/certificates/CT-JSTSEUHR
+Certified in HTML by Sololearn, a recognized authority in online education.
+
+AWARDS
+Google Students Solution Challenge: Global Top 100 | 2023:
+https://developers.google.com/community/gdsc-solution-challenge/winners
+
+Certificate: https://drive.google.com/file/d/1xEYsKK0eqwTqkRtKCkJadCtuFDsU65aX/view?usp=drive_link
+I'm honored to be a Top 100 Global Finalist in the esteemed Google Student Solution Challenge. This award recognizes my innovative mindset and exceptional problem-solving skills, as I've created a solution that addresses pertinent real-world challenges. My selection from a pool of talented individuals underscores my dedication to developing solutions that drive meaningful change.
+
