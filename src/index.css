@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* IDE Theme Colors as CSS Variables */
+:root {
+  --ide-bg: #1e1e1e;
+  --ide-sidebar: #252526;
+  --ide-activity: #333333;
+  --ide-panel: #1e1e1e;
+  --ide-status: #333333;
+  --ide-text: #d4d4d4;
+  --ide-accent: #0e639c;
+  --ide-folder: #c699fa;
+  --ide-file: #5fa5f9;
+}
+
+body {
+  background-color: var(--ide-bg);
+  color: var(--ide-text);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Scrollbar styling for IDE feel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f4f4f;
+}

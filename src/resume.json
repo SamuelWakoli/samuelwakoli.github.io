@@ -1,0 +1,104 @@
+{
+    "basics": {
+        "name": "Samuel Wakoli",
+        "label": "Full Stack Developer (Backend Heavy)",
+        "email": "swwakoli@gmail.com",
+        "phone": "+254797228948",
+        "summary": "I am a self-taught full-stack software developer with over three years of specialized experience in mobile application development, proficient in Flutter and native Android development using Kotlin as my primary programming language, complemented by expertise in Dart and JavaScript. My technical stack encompasses Jetpack Compose for Android front-end development and Flutter for cross-platform solutions, while leveraging Firebase and Google Cloud Platform for robust back-end infrastructure.",
+        "location": {
+            "city": "Nairobi",
+            "country": "Kenya"
+        },
+        "profiles": [
+            {
+                "network": "GitHub",
+                "username": "samuelwakoli",
+                "url": "https://github.com/samuelwakoli"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "samuelwakoli",
+                "url": "https://www.linkedin.com/in/samuelwakoli"
+            }
+        ]
+    },
+    "skills": {
+        "languages": [
+            "Kotlin",
+            "Dart",
+            "JavaScript",
+            "TypeScript",
+            "HTML",
+            "SQL"
+        ],
+        "mobile": [
+            "Android SDK",
+            "Flutter",
+            "Jetpack Compose",
+            "Kotlin Multiplatform"
+        ],
+        "backend": [
+            "Node.js",
+            "Firebase",
+            "Google Cloud Platform",
+            "Rest API"
+        ],
+        "tools": [
+            "Git",
+            "Bash",
+            "PowerShell",
+            "Figma",
+            "Writerside"
+        ]
+    },
+    "experience": [
+        {
+            "company": "Arkcess Care",
+            "position": "Full Stack Software Developer",
+            "startDate": "2024-01",
+            "endDate": "Present",
+            "summary": "Engineered responsive Flutter applications. Implemented comprehensive backend solutions using Firebase (Auth, Firestore, Cloud Functions). Integrated Stripe payment gateway and Gemini AI for resume summaries.",
+            "highlights": [
+                "Reduced application load time by 30% through performance optimization.",
+                "Integrated AI services using Google's Gemini API.",
+                "Led architecture planning sessions."
+            ]
+        },
+        {
+            "company": "AnchorMiles",
+            "position": "Native Android Developer",
+            "startDate": "2023-01",
+            "endDate": "Present",
+            "summary": "Built feature-rich Android applications using Kotlin and Jetpack Compose. Integrated Firebase Realtime Database for offline-first experiences.",
+            "highlights": [
+                "Migrated legacy XML layouts to Jetpack Compose.",
+                "Implemented secure multi-factor authentication.",
+                "Developed efficient background services using WorkManager."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "KCA University",
+            "area": "Information Technology",
+            "studyType": "Diploma",
+            "startDate": "2021-09",
+            "endDate": "2023-12"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Android Development",
+            "issuer": "Google Africa Developer Training Program"
+        },
+        {
+            "name": "Kotlin",
+            "issuer": "Sololearn"
+        },
+        {
+            "name": "Google Students Solution Challenge: Global Top 100",
+            "issuer": "Google",
+            "date": "2023"
+        }
+    ]
+}
