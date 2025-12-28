@@ -1,0 +1,172 @@
+{
+    "name": "Samuel Wakoli",
+    "role": "Full Stack Developer (Backend Heavy)",
+    "bio": "I am a self-taught full-stack software developer with over three years of specialized experience in mobile application development, proficient in Flutter and native Android development using Kotlin as my primary programming language, complemented by expertise in Dart and JavaScript. My technical stack encompasses Jetpack Compose for Android front-end development and Flutter for cross-platform solutions, while leveraging Firebase and Google Cloud Platform for robust back-end infrastructure.",
+    "location": "Perris, California (Remote) / Nairobi, Kenya",
+    "avatar": "https://github.com/samuelwakoli.png",
+    "social": {
+        "github": "https://github.com/samuelwakoli",
+        "linkedin": "https://www.linkedin.com/in/samuelwakoli",
+        "twitter": "",
+        "email": "swwakoli@gmail.com",
+        "phone": "+254797228948",
+        "google_play": "https://play.google.com/store/apps/dev?id=5163633591987733044",
+        "google_dev": "https://g.dev/samuelwakoli"
+    },
+    "skills": [
+        {
+            "name": "Kotlin",
+            "icon": "https://skillicons.dev/icons?i=kotlin"
+        },
+        {
+            "name": "Dart",
+            "icon": "https://skillicons.dev/icons?i=dart"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "https://skillicons.dev/icons?i=js"
+        },
+        {
+            "name": "TypeScript",
+            "icon": "https://skillicons.dev/icons?i=ts"
+        },
+        {
+            "name": "Android",
+            "icon": "https://skillicons.dev/icons?i=androidstudio"
+        },
+        {
+            "name": "Flutter",
+            "icon": "https://skillicons.dev/icons?i=flutter"
+        },
+        {
+            "name": "Node.js",
+            "icon": "https://skillicons.dev/icons?i=nodejs"
+        },
+        {
+            "name": "Firebase",
+            "icon": "https://skillicons.dev/icons?i=firebase"
+        },
+        {
+            "name": "GCP",
+            "icon": "https://skillicons.dev/icons?i=gcp"
+        },
+        {
+            "name": "Git",
+            "icon": "https://skillicons.dev/icons?i=git"
+        },
+        {
+            "name": "Bash",
+            "icon": "https://skillicons.dev/icons?i=bash"
+        },
+        {
+            "name": "PowerShell",
+            "icon": "https://skillicons.dev/icons?i=powershell"
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "level": "Fluent"
+        },
+        {
+            "name": "Swahili",
+            "level": "Native"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Full Stack Software Developer",
+            "company": "Arkcess Care",
+            "year": "Jan 2024 — Present",
+            "description": "Engineered responsive Flutter applications with unified codebases. Implemented comprehensive backend solutions using Firebase (Auth, Firestore, Cloud Functions). Integrated Stripe for payments and Google's Gemini AI for resume summaries. Led architecture planning and provided technical leadership on Flutter best practices."
+        },
+        {
+            "role": "Native Android Developer (Seasonal)",
+            "company": "AnchorMiles",
+            "year": "Jan 2023 — Present",
+            "description": "Built feature-rich Android applications using Kotlin and Jetpack Compose. Integrated Firebase Realtime Database for offline-first experiences. Migrated legacy XML layouts to Jetpack Compose. Implemented secure multi-factor authentication and background processing with WorkManager."
+        }
+    ],
+    "education": [
+        {
+            "degree": "Diploma in Information Technology",
+            "school": "KCA University",
+            "year": "Sep 2021 — Dec 2023",
+            "description": "Relevant Units: Computer Organization, Programming Methodology, Data Structures & Algorithms, Java Programming, Application Programming."
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Android Development by Google Africa Developer Training Program",
+            "issuer": "Google",
+            "year": "2023",
+            "link": "#",
+            "description": "I have an Android Development certification from Google's training program. I have in-depth knowledge and skills, enabling me to contribute to Android projects efficiently."
+        },
+        {
+            "name": "Kotlin Certificate",
+            "issuer": "Sololearn",
+            "year": "2023",
+            "link": "#",
+            "description": "I have got the Kotlin certification from Sololearn, demonstrating my proficiency in this programming language."
+        },
+        {
+            "name": "SQL Certificate",
+            "issuer": "Sololearn",
+            "year": "2023",
+            "link": "#",
+            "description": "I have got a certification in SQL from Sololearn, showcasing my proficiency in this widely used database language."
+        },
+        {
+            "name": "HTML Certificate",
+            "issuer": "Sololearn",
+            "year": "2023",
+            "link": "#",
+            "description": "Certified in HTML by Sololearn, a recognized authority in online education."
+        }
+    ],
+    "awards": [
+        {
+            "name": "Google Students Solution Challenge: Global Top 100",
+            "issuer": "Google",
+            "year": "2023",
+            "link": "https://developers.google.com/community/gdsc-solution-challenge/winners",
+            "description": "I'm honored to be a Top 100 Global Finalist in the esteemed Google Student Solution Challenge. This award recognizes my innovative mindset and exceptional problem-solving skills, as I've created a solution that addresses pertinent real-world challenges."
+        }
+    ],
+    "projects": [
+        {
+            "title": "Arkcess Care Platform",
+            "description": "Healthcare management platform with AI integration and payment processing.",
+            "tech": [
+                "Flutter",
+                "Firebase",
+                "Node.js",
+                "Stripe"
+            ],
+            "link": "https://www.linkedin.com/company/arkcesscare",
+            "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+        },
+        {
+            "title": "AnchorMiles App",
+            "description": "Native Android loyalty application with offline capabilities.",
+            "tech": [
+                "Kotlin",
+                "Jetpack Compose",
+                "Firebase"
+            ],
+            "link": "#",
+            "image": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=800&q=80"
+        },
+        {
+            "title": "Google Play Apps",
+            "description": "Collection of Android apps published under 'SamWroteTheCode'.",
+            "tech": [
+                "Android",
+                "Kotlin"
+            ],
+            "link": "https://play.google.com/store/apps/dev?id=SamWroteTheCode",
+            "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+        }
+    ]
+}
