@@ -59,11 +59,11 @@ src/
 
 ## 🎨 Customization
 
-To personalize this portfolio, you only need to edit **one file**:
+To personalize this portfolio, edit **one file**:
 
 * **`src/config/profile.json`**
 
-Modify this file to update your:
+Modify this file to update:
 
 * Name, Role, and Bio
 * Contact Links & Social Profiles
@@ -77,9 +77,9 @@ This project is configured for **GitHub Pages**.
 
 1. Push changes to `main`.
 2. The GitHub Action (`.github/workflows/deploy.yml`) will automatically build and deploy the site.
-3. Your site will be live at `https://samuelwakoli.github.io`.
+3. The site will be live at `https://samuelwakoli.github.io`.
 
-> **Note**: Ensure your repository is named `username.github.io` for root domain hosting.
+> **Note**: Ensure the repository is named `username.github.io` for root domain hosting.
 
 ## 📄 License
 
