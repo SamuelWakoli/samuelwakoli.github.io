@@ -14,52 +14,110 @@
     },
     "skills": [
         {
-            "name": "Kotlin",
-            "icon": "https://skillicons.dev/icons?i=kotlin"
+            "category": "Languages",
+            "items": [
+                {
+                    "name": "Kotlin",
+                    "icon": "https://skillicons.dev/icons?i=kotlin"
+                },
+                {
+                    "name": "Dart",
+                    "icon": "https://skillicons.dev/icons?i=dart"
+                },
+                {
+                    "name": "JavaScript",
+                    "icon": "https://skillicons.dev/icons?i=js"
+                },
+                {
+                    "name": "TypeScript",
+                    "icon": "https://skillicons.dev/icons?i=ts"
+                }
+            ]
         },
         {
-            "name": "Dart",
-            "icon": "https://skillicons.dev/icons?i=dart"
+            "category": "Mobile Development",
+            "items": [
+                {
+                    "name": "Android",
+                    "icon": "https://skillicons.dev/icons?i=androidstudio"
+                },
+                {
+                    "name": "Flutter",
+                    "icon": "https://skillicons.dev/icons?i=flutter"
+                },
+                {
+                    "name": "Kotlin Multiplatform",
+                    "icon": "https://skillicons.dev/icons?i=kotlin"
+                },
+                {
+                    "name": "Material Design",
+                    "icon": "https://skillicons.dev/icons?i=materialui"
+                }
+            ]
         },
         {
-            "name": "JavaScript",
-            "icon": "https://skillicons.dev/icons?i=js"
+            "category": "Backend & Cloud",
+            "items": [
+                {
+                    "name": "Node.js",
+                    "icon": "https://skillicons.dev/icons?i=nodejs"
+                },
+                {
+                    "name": "Firebase",
+                    "icon": "https://skillicons.dev/icons?i=firebase"
+                },
+                {
+                    "name": "GCP",
+                    "icon": "https://skillicons.dev/icons?i=gcp"
+                }
+            ]
         },
         {
-            "name": "TypeScript",
-            "icon": "https://skillicons.dev/icons?i=ts"
+            "category": "Tools & DevOps",
+            "items": [
+                {
+                    "name": "Git",
+                    "icon": "https://skillicons.dev/icons?i=git"
+                },
+                {
+                    "name": "Bash",
+                    "icon": "https://skillicons.dev/icons?i=bash"
+                },
+                {
+                    "name": "PowerShell",
+                    "icon": "https://skillicons.dev/icons?i=powershell"
+                }
+            ]
         },
         {
-            "name": "Android",
-            "icon": "https://skillicons.dev/icons?i=androidstudio"
+            "category": "Documentation",
+            "items": [
+                {
+                    "name": "Writerside IDE",
+                    "icon": "https://skillicons.dev/icons?i=idea"
+                },
+                {
+                    "name": "Markdown",
+                    "icon": "https://skillicons.dev/icons?i=md"
+                },
+                {
+                    "name": "XML",
+                    "icon": "https://skillicons.dev/icons?i=html"
+                }
+            ]
         },
         {
-            "name": "Flutter",
-            "icon": "https://skillicons.dev/icons?i=flutter"
-        },
-        {
-            "name": "Node.js",
-            "icon": "https://skillicons.dev/icons?i=nodejs"
-        },
-        {
-            "name": "Firebase",
-            "icon": "https://skillicons.dev/icons?i=firebase"
-        },
-        {
-            "name": "GCP",
-            "icon": "https://skillicons.dev/icons?i=gcp"
-        },
-        {
-            "name": "Git",
-            "icon": "https://skillicons.dev/icons?i=git"
-        },
-        {
-            "name": "Bash",
-            "icon": "https://skillicons.dev/icons?i=bash"
-        },
-        {
-            "name": "PowerShell",
-            "icon": "https://skillicons.dev/icons?i=powershell"
+            "category": "Engineering Practices",
+            "items": [
+                {
+                    "name": "Algorithm Design",
+                    "icon": "https://skillicons.dev/icons?i=cs"
+                },
+                {
+                    "name": "Unit Testing",
+                    "icon": "https://skillicons.dev/icons?i=jest"
+                }
+            ]
         }
     ],
     "experience": [

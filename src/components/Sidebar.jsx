@@ -49,7 +49,7 @@ export const Sidebar = () => {
     ]
 
     return (
-        <aside className="hidden lg:flex flex-col w-80 h-screen sticky top-0 left-0 bg-[#0f172a]/50 border-r border-white/5 backdrop-blur-xl p-8 overflow-y-auto">
+        <aside className="hidden lg:flex flex-col w-80 h-[calc(100vh-32px)] sticky top-4 ml-4 bg-slate-950/50 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 overflow-y-auto shadow-2xl">
             <div className="mb-12">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">{profile.name}</h1>
                 <p className="text-slate-500 text-sm mt-2">{profile.role}</p>

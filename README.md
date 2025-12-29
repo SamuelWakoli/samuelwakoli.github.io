@@ -28,14 +28,11 @@
 
 ###
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SamuelWakoli&hide_title=false&hide_rank=false&show_icons=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SamuelWakoli&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
-</div>
+<p align="left">Hello world. I'm Samuel a self-taught full-stack developer in mobile app development, specializing in Flutter for cross-platform and native Android.
+Loves Firebase/Google Cloud for back-end, with a logical, persistent problem-solving style and dedication to learning new technologies.</p>
 
 ###
 
-<p align="left">Hello world. I'm Samuel a self-taught full-stack developer in mobile app development, specializing in Flutter for cross-platform and native Android.
-Loves Firebase/Google Cloud for back-end, with a logical, persistent problem-solving style and dedication to learning new technologies.</p>
+<a href="https://samuelwakoli.github.io">samuelwakoli.github.io</a>
 
 ###
