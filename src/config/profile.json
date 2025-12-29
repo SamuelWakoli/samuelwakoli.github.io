@@ -39,7 +39,7 @@
       "items": [
         {
           "name": "Android",
-          "icon": "https://skillicons.dev/icons?i=androidstudio"
+          "icon": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png"
         },
         {
           "name": "Flutter",
@@ -47,7 +47,7 @@
         },
         {
           "name": "Kotlin Multiplatform",
-          "icon": "https://skillicons.dev/icons?i=kotlin"
+          "icon": "https://developer.android.com/static/images/picto-icons/kmp.svg"
         },
         {
           "name": "Material Design",
@@ -56,7 +56,21 @@
       ]
     },
     {
-      "category": "AI"
+      "category": "AI",
+      "items": [
+        {
+          "name": "Gemini AI",
+          "icon": "https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/gemini-app-icon-hd.png"
+        },
+        {
+          "name": "GenKit",
+          "icon": "https://avatars.githubusercontent.com/u/166032008?v=4"
+        },
+        {
+          "name": "Firebase AI Logic",
+          "icon": "https://firebase.google.com/static/images/products/firebase-ai-logic/firebase-ai-logic-hero_1x.png"
+        }
+      ]
     },
     {
       "category": "Backend & Cloud",
@@ -67,7 +81,7 @@
         },
         {
           "name": "Firebase",
-          "icon": "https://skillicons.dev/icons?i=firebase"
+          "icon": "https://images.seeklogo.com/logo-png/61/3/firebase-icon-logo-png_seeklogo-615938.png"
         },
         {
           "name": "GCP",
@@ -97,7 +111,7 @@
       "items": [
         {
           "name": "Writerside IDE",
-          "icon": "https://skillicons.dev/icons?i=idea"
+          "icon": "https://mosaic.ee/wp-content/uploads/2024/08/Writerside-icon.png"
         },
         {
           "name": "Markdown",
