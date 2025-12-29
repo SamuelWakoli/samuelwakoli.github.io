@@ -3,14 +3,34 @@ import profile from "../config/profile.json";
 import { Briefcase } from "lucide-react";
 
 export const Experience = () => {
+  const formatDescription = (description) => {
+    if (!description) return null;
+    return description.split("\n").map((line, i) => {
+      const colonIndex = line.indexOf(":");
+      if (colonIndex !== -1) {
+        const label = line.substring(0, colonIndex + 1);
+        const rest = line.substring(colonIndex + 1);
+        return (
+          <span key={i} className="block mb-2 last:mb-0">
+            <span className="font-bold text-slate-100">{label}</span>
+            {rest}
+          </span>
+        );
+      }
+      return (
+        <span key={i} className="block mb-2 last:mb-0">
+          {line}
+        </span>
+      );
+    });
+  };
+
   return (
     <Section id="experience">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="flex items-center justify-center gap-4 mb-16">
           <Briefcase className="w-8 h-8 text-blue-500" />
-          <h2 className="text-3xl md:text-5xl font-bold text-white">
-            Experience
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-white">Experience</h2>
         </div>
 
         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
@@ -40,9 +60,9 @@ export const Experience = () => {
                 <div className="text-blue-400 font-medium mb-3 text-sm">
                   {exp.company}
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  {exp.description}
-                </p>
+                <div className="text-slate-400 text-sm leading-relaxed">
+                  {formatDescription(exp.description)}
+                </div>
               </div>
             </div>
           ))}

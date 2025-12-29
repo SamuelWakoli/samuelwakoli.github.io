@@ -3,6 +3,28 @@ import profile from "../../config/profile.json";
 import { Briefcase } from "lucide-react";
 
 export const ExperienceCard = () => {
+  const formatDescription = (description) => {
+    if (!description) return null;
+    return description.split("\n").map((line, i) => {
+      const colonIndex = line.indexOf(":");
+      if (colonIndex !== -1) {
+        const label = line.substring(0, colonIndex + 1);
+        const rest = line.substring(colonIndex + 1);
+        return (
+          <span key={i} className="block mb-2 last:mb-0">
+            <span className="font-bold text-slate-100">{label}</span>
+            {rest}
+          </span>
+        );
+      }
+      return (
+        <span key={i} className="block mb-2 last:mb-0">
+          {line}
+        </span>
+      );
+    });
+  };
+
   return (
     <Card className="col-span-12 row-span-2">
       <div className="flex items-center gap-3 mb-8">
@@ -20,16 +42,14 @@ export const ExperienceCard = () => {
               <h4 className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
                 {exp.role}
               </h4>
-              <span className="text-xs font-mono text-slate-500">
-                {exp.year}
-              </span>
+              <span className="text-xs font-mono text-slate-500">{exp.year}</span>
             </div>
             <div className="text-blue-400/80 text-sm font-medium mb-3">
               {exp.company}
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              {exp.description}
-            </p>
+            <div className="text-slate-400 text-sm leading-relaxed">
+              {formatDescription(exp.description)}
+            </div>
           </div>
         ))}
       </div>
