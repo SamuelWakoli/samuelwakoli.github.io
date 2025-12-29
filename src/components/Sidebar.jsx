@@ -162,6 +162,12 @@ export const MobileDrawer = () => {
                                     )
                                 })}
                             </div>
+
+                            <div className="mt-8 pt-8 border-t border-white/5">
+                                <a href="/resume.pdf" target="_blank" className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors font-medium shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transform">
+                                    <FileText size={18} /> Download Resume
+                                </a>
+                            </div>
                         </motion.div>
                     </>
                 )}
