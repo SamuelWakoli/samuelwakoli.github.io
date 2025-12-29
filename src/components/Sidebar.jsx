@@ -230,53 +230,67 @@ export const MobileDrawer = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-4 left-4 w-[80%] max-w-[300px] h-[calc(100vh-32px)] bg-slate-950/90 backdrop-blur-xl border border-slate-800 z-[70] shadow-2xl p-6 rounded-3xl lg:hidden flex flex-col"
+              className="fixed top-4 left-4 w-[85%] max-w-[320px] h-fit max-h-[calc(100vh-32px)] bg-slate-950/95 backdrop-blur-2xl border border-slate-800 z-[70] shadow-2xl p-6 rounded-3xl lg:hidden flex flex-col"
             >
-              <div className="flex justify-between items-center mb-8">
-                <span className="font-bold text-white text-lg">Menu</span>
+              <div className="flex justify-between items-start mb-8 shrink-0">
+                <div>
+                  <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    {profile.name}
+                  </h1>
+                  <p className="text-slate-500 text-xs mt-1">{profile.role}</p>
+                </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-slate-400 hover:text-white"
+                  className="p-2 bg-slate-900 rounded-xl text-slate-400 hover:text-white flex items-center gap-2 group border border-slate-800"
                 >
-                  <X size={24} />
+                  <X size={20} />
                 </button>
               </div>
 
-              <div className="space-y-2 flex-1 overflow-y-auto">
-                {links.map((link, index) => {
-                  const isActive = activeSection === link.id;
-                  return (
-                    <a
-                      key={index}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all ${
-                        isActive
-                          ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
-                          : "text-slate-300 hover:bg-slate-800/50"
-                      }`}
-                    >
-                      <span
-                        className={
-                          isActive ? "text-blue-400" : "text-slate-500"
-                        }
+              <div className="overflow-y-auto pr-2 scrollbar-none">
+                <nav className="space-y-1.5 mb-8">
+                  {links.map((link, index) => {
+                    const isActive = activeSection === link.id;
+                    return (
+                      <a
+                        key={index}
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all relative group ${
+                          isActive
+                            ? "bg-blue-600 text-white shadow-lg shadow-blue-500/25"
+                            : "text-slate-400 hover:text-white hover:bg-white/5"
+                        }`}
                       >
-                        {link.icon}
-                      </span>
-                      <span>{link.label}</span>
-                    </a>
-                  );
-                })}
-              </div>
+                        <span
+                          className={`transition-colors ${isActive ? "text-white" : "group-hover:text-blue-400"}`}
+                        >
+                          {link.icon}
+                        </span>
+                        <span className="font-medium text-sm">
+                          {link.label}
+                        </span>
 
-              <div className="mt-8 pt-8 border-t border-white/5">
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors font-medium shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transform"
-                >
-                  <FileText size={18} /> Download Resume
-                </a>
+                        {isActive && (
+                          <motion.div
+                            layoutId="mobile-active-dot"
+                            className="absolute right-4 w-1.5 h-1.5 bg-white rounded-full"
+                          />
+                        )}
+                      </a>
+                    );
+                  })}
+                </nav>
+
+                <div className="pt-6 pb-8 border-t border-white/5">
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    className="flex items-center justify-center gap-2 w-full py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-500 transition-colors font-semibold shadow-lg shadow-blue-500/20 active:scale-95 transform"
+                  >
+                    <FileText size={18} /> Download Resume
+                  </a>
+                </div>
               </div>
             </motion.div>
           </>

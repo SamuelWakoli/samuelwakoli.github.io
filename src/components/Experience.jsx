@@ -30,7 +30,9 @@ export const Experience = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="flex items-center justify-center gap-4 mb-16">
           <Briefcase className="w-8 h-8 text-blue-500" />
-          <h2 className="text-3xl md:text-5xl font-bold text-white">Experience</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-white">
+            Experience
+          </h2>
         </div>
 
         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">

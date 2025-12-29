@@ -6,21 +6,21 @@ A modern, highly responsive, and strictly professional developer portfolio built
 
 ## 🚀 Key Features
 
-* **Modern "Floating Card" Design**: A cohesive glassmorphism aesthetic with elevated cards and detached sidebars.
-* **Responsive Navigation**:
-  * **Desktop**: Persistent, floating sidebar with scroll spy.
-  * **Mobile**: Smooth slide-out drawer with gesture support.
-* **JSON-Driven Content**: All personal data (profile, skills, experience) is managed via a single `src/config/profile.json` file.
-* **High Performance**: Built on Vite for lightning-fast HMR and optimized production builds.
-* **Automated Deployment**: Includes GitHub Actions workflow for auto-deploying to GitHub Pages.
+- **Modern "Floating Card" Design**: A cohesive glassmorphism aesthetic with elevated cards and detached sidebars.
+- **Responsive Navigation**:
+  - **Desktop**: Persistent, floating sidebar with scroll spy.
+  - **Mobile**: Smooth slide-out drawer with gesture support.
+- **JSON-Driven Content**: All personal data (profile, skills, experience) is managed via a single `src/config/profile.json` file.
+- **High Performance**: Built on Vite for lightning-fast HMR and optimized production builds.
+- **Automated Deployment**: Includes GitHub Actions workflow for auto-deploying to GitHub Pages.
 
 ## 🛠️ Technology Stack
 
-* **Core**: React 18, Vite
-* **Styling**: Tailwind CSS v4 (Vanilla)
-* **Animations**: Framer Motion
-* **Icons**: Lucide React
-* **Fonts**: Inter & Outfit (via Fontsource)
+- **Core**: React 18, Vite
+- **Styling**: Tailwind CSS v4 (Vanilla)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Inter & Outfit (via Fontsource)
 
 ## 📂 Project Structure
 
@@ -40,36 +40,36 @@ src/
 
 1. **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/SamuelWakoli/samuelwakoli.github.io.git
-    cd samuelwakoli.github.io
-    ```
+   ```bash
+   git clone https://github.com/SamuelWakoli/samuelwakoli.github.io.git
+   cd samuelwakoli.github.io
+   ```
 
 2. **Install dependencies**:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. **Start development server**:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 ## 🎨 Customization
 
 To personalize this portfolio, edit **one file**:
 
-* **`src/config/profile.json`**
+- **`src/config/profile.json`**
 
 Modify this file to update:
 
-* Name, Role, and Bio
-* Contact Links & Social Profiles
-* Technical Skills (grouped by category)
-* Work Experience & Education
-* Certifications & Awards
+- Name, Role, and Bio
+- Contact Links & Social Profiles
+- Technical Skills (grouped by category)
+- Work Experience & Education
+- Certifications & Awards
 
 ## 🚀 Deployment
 
