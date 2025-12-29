@@ -46,6 +46,7 @@ export const Card = ({ children, className = '', noPadding = false, ...props }) 
             className={`relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/50 backdrop-blur-xl ${className}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -5, transition: { duration: 0.2 } }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5 }}
         >

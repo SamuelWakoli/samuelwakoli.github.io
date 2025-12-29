@@ -134,7 +134,7 @@ export const MobileDrawer = () => {
                             animate={{ x: 0 }}
                             exit={{ x: "-100%" }}
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="fixed top-4 left-4 w-[80%] max-w-[300px] h-[calc(100vh-32px)] bg-[#0f172a]/95 backdrop-blur-2xl border border-slate-700/50 z-[70] shadow-2xl p-6 rounded-3xl lg:hidden flex flex-col"
+                            className="fixed top-4 left-4 w-[80%] max-w-[300px] h-[calc(100vh-32px)] bg-slate-950/90 backdrop-blur-xl border border-slate-800 z-[70] shadow-2xl p-6 rounded-3xl lg:hidden flex flex-col"
                         >
                             <div className="flex justify-between items-center mb-8">
                                 <span className="font-bold text-white text-lg">Menu</span>
