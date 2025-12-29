@@ -1,38 +1,86 @@
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=androidstudio" height="40" alt="androidstudio logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=flutter" height="40" alt="flutter logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=kotlin" height="40" alt="kolin logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=idea" height="40" alt="intellijidea logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=bash" height="40" alt="bash logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=gradle" height="40" alt="gradle logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=md" height="40" alt="markdown logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=sqlite" height="40" alt="sqlite logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=nodejs" height="40" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=firebase" height="40" alt="firebase logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=gcp" height="40" alt="gcp logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=unity" height="40" alt="unity logo"  />
-</div>
+# Professional Developer Portfolio
 
-###
+A modern, highly responsive, and strictly professional developer portfolio built with **React**, **Tailwind CSS**, and **Framer Motion**. Designed for performance, accessibility, and ease of customization.
 
-<p align="left">Hello world. I'm Samuel a self-taught full-stack developer in mobile app development, specializing in Flutter for cross-platform and native Android.
-Loves Firebase/Google Cloud for back-end, with a logical, persistent problem-solving style and dedication to learning new technologies.</p>
+[![Deploy to GitHub Pages](https://github.com/SamuelWakoli/samuelwakoli.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/SamuelWakoli/samuelwakoli.github.io/actions/workflows/deploy.yml)
 
-###
+## 🚀 Key Features
 
-<a href="https://samuelwakoli.github.io">samuelwakoli.github.io</a>
+* **Modern "Floating Card" Design**: A cohesive glassmorphism aesthetic with elevated cards and detached sidebars.
+* **Responsive Navigation**:
+  * **Desktop**: Persistent, floating sidebar with scroll spy.
+  * **Mobile**: Smooth slide-out drawer with gesture support.
+* **JSON-Driven Content**: All personal data (profile, skills, experience) is managed via a single `src/config/profile.json` file.
+* **High Performance**: Built on Vite for lightning-fast HMR and optimized production builds.
+* **Automated Deployment**: Includes GitHub Actions workflow for auto-deploying to GitHub Pages.
 
-###
+## 🛠️ Technology Stack
+
+* **Core**: React 18, Vite
+* **Styling**: Tailwind CSS v4 (Vanilla)
+* **Animations**: Framer Motion
+* **Icons**: Lucide React
+* **Fonts**: Inter & Outfit (via Fontsource)
+
+## 📂 Project Structure
+
+```bash
+src/
+├── components/         # Reusable UI components
+│   ├── bento/         # Grid items (SocialCard, SkillsGrid)
+│   ├── Card.jsx       # Base "Floating Card" wrapper
+│   └── Sidebar.jsx    # Navigation logic (Desktop & Mobile)
+├── config/
+│   └── profile.json   # SINGLE SOURCE OF TRUTH for content
+├── assets/            # Static assets
+└── App.jsx            # Main layout and composition
+```
+
+## ⚡ Quick Start
+
+1. **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/SamuelWakoli/samuelwakoli.github.io.git
+    cd samuelwakoli.github.io
+    ```
+
+2. **Install dependencies**:
+
+    ```bash
+    npm install
+    ```
+
+3. **Start development server**:
+
+    ```bash
+    npm run dev
+    ```
+
+## 🎨 Customization
+
+To personalize this portfolio, you only need to edit **one file**:
+
+* **`src/config/profile.json`**
+
+Modify this file to update your:
+
+* Name, Role, and Bio
+* Contact Links & Social Profiles
+* Technical Skills (grouped by category)
+* Work Experience & Education
+* Certifications & Awards
+
+## 🚀 Deployment
+
+This project is configured for **GitHub Pages**.
+
+1. Push changes to `main`.
+2. The GitHub Action (`.github/workflows/deploy.yml`) will automatically build and deploy the site.
+3. Your site will be live at `https://samuelwakoli.github.io`.
+
+> **Note**: Ensure your repository is named `username.github.io` for root domain hosting.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

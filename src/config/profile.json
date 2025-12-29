@@ -1,180 +1,180 @@
 {
-    "name": "Samuel Wakoli",
-    "role": "Full Stack Developer (Backend Heavy)",
-    "bio": "I am a self-taught full-stack software developer with over three years of specialized experience in mobile application development, proficient in Flutter and native Android development using Kotlin as my primary programming language, complemented by expertise in Dart and JavaScript. My technical stack encompasses Jetpack Compose for Android front-end development and Flutter for cross-platform solutions, while leveraging Firebase and Google Cloud Platform for robust back-end infrastructure. I bring a persistent and logical approach to problem-solving, coupled with a commitment to continuous learning and adopting emerging technologies, with the career objective of advancing my expertise while delivering meaningful impact within a dynamic development environment.",
-    "location": "Perris, California (Remote) / Nairobi, Kenya",
-    "avatar": "/profile.png",
-    "social": {
-        "github": "https://github.com/samuelwakoli",
-        "linkedin": "https://www.linkedin.com/in/samuelwakoli/",
-        "google_play": "https://play.google.com/store/apps/dev?id=5163633591987733044",
-        "google_dev": "https://g.dev/samuelwakoli",
-        "email": "swwakoli@gmail.com",
-        "phone": "+254797228948"
+  "name": "Samuel Wakoli",
+  "role": "Full Stack Developer (Backend Heavy)",
+  "bio": "I am a self-taught full-stack software developer with over three years of specialized experience in mobile application development, proficient in Flutter and native Android development using Kotlin as my primary programming language, complemented by expertise in Dart and JavaScript. My technical stack encompasses Jetpack Compose for Android front-end development and Flutter for cross-platform solutions, while leveraging Firebase and Google Cloud Platform for robust back-end infrastructure. I bring a persistent and logical approach to problem-solving, coupled with a commitment to continuous learning and adopting emerging technologies, with the career objective of advancing my expertise while delivering meaningful impact within a dynamic development environment.",
+  "location": "Perris, California (Remote) / Nairobi, Kenya",
+  "avatar": "/profile.png",
+  "social": {
+    "github": "https://github.com/samuelwakoli",
+    "linkedin": "https://www.linkedin.com/in/samuelwakoli/",
+    "google_play": "https://play.google.com/store/apps/dev?id=5163633591987733044",
+    "google_dev": "https://g.dev/samuelwakoli",
+    "email": "swwakoli@gmail.com",
+    "phone": "+254797228948"
+  },
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        {
+          "name": "Kotlin",
+          "icon": "https://skillicons.dev/icons?i=kotlin"
+        },
+        {
+          "name": "Dart",
+          "icon": "https://skillicons.dev/icons?i=dart"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "https://skillicons.dev/icons?i=js"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "https://skillicons.dev/icons?i=ts"
+        }
+      ]
     },
-    "skills": [
+    {
+      "category": "Mobile Development",
+      "items": [
         {
-            "category": "Languages",
-            "items": [
-                {
-                    "name": "Kotlin",
-                    "icon": "https://skillicons.dev/icons?i=kotlin"
-                },
-                {
-                    "name": "Dart",
-                    "icon": "https://skillicons.dev/icons?i=dart"
-                },
-                {
-                    "name": "JavaScript",
-                    "icon": "https://skillicons.dev/icons?i=js"
-                },
-                {
-                    "name": "TypeScript",
-                    "icon": "https://skillicons.dev/icons?i=ts"
-                }
-            ]
+          "name": "Android",
+          "icon": "https://skillicons.dev/icons?i=androidstudio"
         },
         {
-            "category": "Mobile Development",
-            "items": [
-                {
-                    "name": "Android",
-                    "icon": "https://skillicons.dev/icons?i=androidstudio"
-                },
-                {
-                    "name": "Flutter",
-                    "icon": "https://skillicons.dev/icons?i=flutter"
-                },
-                {
-                    "name": "Kotlin Multiplatform",
-                    "icon": "https://skillicons.dev/icons?i=kotlin"
-                },
-                {
-                    "name": "Material Design",
-                    "icon": "https://skillicons.dev/icons?i=materialui"
-                }
-            ]
+          "name": "Flutter",
+          "icon": "https://skillicons.dev/icons?i=flutter"
         },
         {
-            "category": "Backend & Cloud",
-            "items": [
-                {
-                    "name": "Node.js",
-                    "icon": "https://skillicons.dev/icons?i=nodejs"
-                },
-                {
-                    "name": "Firebase",
-                    "icon": "https://skillicons.dev/icons?i=firebase"
-                },
-                {
-                    "name": "GCP",
-                    "icon": "https://skillicons.dev/icons?i=gcp"
-                }
-            ]
+          "name": "Kotlin Multiplatform",
+          "icon": "https://skillicons.dev/icons?i=kotlin"
         },
         {
-            "category": "Tools & DevOps",
-            "items": [
-                {
-                    "name": "Git",
-                    "icon": "https://skillicons.dev/icons?i=git"
-                },
-                {
-                    "name": "Bash",
-                    "icon": "https://skillicons.dev/icons?i=bash"
-                },
-                {
-                    "name": "PowerShell",
-                    "icon": "https://skillicons.dev/icons?i=powershell"
-                }
-            ]
-        },
-        {
-            "category": "Documentation",
-            "items": [
-                {
-                    "name": "Writerside IDE",
-                    "icon": "https://skillicons.dev/icons?i=idea"
-                },
-                {
-                    "name": "Markdown",
-                    "icon": "https://skillicons.dev/icons?i=md"
-                },
-                {
-                    "name": "XML",
-                    "icon": "https://skillicons.dev/icons?i=html"
-                }
-            ]
-        },
-        {
-            "category": "Engineering Practices",
-            "items": [
-                {
-                    "name": "Algorithm Design",
-                    "icon": "https://skillicons.dev/icons?i=cs"
-                },
-                {
-                    "name": "Unit Testing",
-                    "icon": "https://skillicons.dev/icons?i=jest"
-                }
-            ]
+          "name": "Material Design",
+          "icon": "https://skillicons.dev/icons?i=materialui"
         }
-    ],
-    "experience": [
+      ]
+    },
+    {
+      "category": "Backend & Cloud",
+      "items": [
         {
-            "role": "Full Stack Software Developer",
-            "company": "Arkcess Care",
-            "location": "Perris, California, United States",
-            "year": "January 2024—Present",
-            "type": "Remote - Full-time",
-            "description": "Cross-Platform Development: Engineered responsive Flutter applications with unified codebases for web platforms.\nFirebase Integration: Implemented comprehensive backend solutions using Firebase services including Authentication, Firestore, and Cloud Functions to create scalable and secure applications.\nAI Integration: Implemented AI services such as resume summary generation using Google’s Gemini AI developer API on server side, with Node.js.\nPayment Gateway: Integrated Stripe financial services such as invoicing, subscription and one-time checkout. Ensuring secure payment in our web app.\nUI/UX Implementation: Translated wireframes and design mockups into user interfaces using Flutter's widget system and custom animations.\nTechnical Leadership: Led architecture planning sessions and provided guidance to fellow developers on Flutter best practices and state management approaches.\nAPI Development: Designed and implemented RESTful APIs using Node.js and Firebase Cloud Functions to support web client applications.\nPerformance Optimization: Conducted code reviews and performance profiling to identify and resolve bottlenecks, improving application load time by 30%.\nUser Support Systems: Created in-app feedback mechanisms and analytics integrations to gather user insights and prioritize feature development.\nCI/CD Pipeline Management: Established automated testing and deployment workflows to ensure consistent quality across all application releases."
+          "name": "Node.js",
+          "icon": "https://skillicons.dev/icons?i=nodejs"
         },
         {
-            "role": "Native Android Developer (Seasonal)",
-            "company": "AnchorMiles",
-            "location": "Garden Estate, Thika Road, NRB",
-            "year": "January 2023—Present",
-            "type": "",
-            "description": "Native Android Development: Built feature-rich Android applications using Kotlin and Jetpack Compose, following Material Design principles and MVVM architecture.\nReal-time Data Synchronization: Integrated Firebase Realtime Database and Firestore for seamless offline-first experiences with conflict resolution.\nCompose UI Implementation: Leveraged Jetpack Compose to create modern, declarative user interfaces with custom theming and animations.\nAuthentication Systems: Implemented secure multi-factor authentication flows using Firebase Authentication and custom token management.\nBackground Processing: Developed efficient background services for data synchronization and push notification handling using WorkManager.\nCode Migration: Successfully migrated legacy XML-based layouts to Jetpack Compose, improving development velocity and code maintainability.\nAnalytics Integration: Implemented comprehensive user analytics using Firebase Analytics to track engagement metrics and feature adoption.\nSDK Integration: Seamlessly integrated third-party libraries and payment gateways for enhanced application functionality."
-        }
-    ],
-    "education": [
-        {
-            "degree": "Diploma in Information Technology",
-            "school": "KCA University | Ruaraka, Nairobi",
-            "year": "September 2021—December 2023",
-            "description": "Relevant Units:\nDIT 104: Computer organization and architecture\nDIT 305: Programming methodology\nDIT 406: Data structures and algorithms\nDIT 409: Java Programming\nDIT 504: Application programming"
-        }
-    ],
-    "certifications": [
-        {
-            "name": "Android Development by Google Africa Developer Training Program",
-            "link": "https://drive.google.com/file/d/1Ba77okpo-5xhgO5wCyBb_EdjLWg1-uWQ/view?usp=sharing",
-            "description": "I have an Android Development certification from Google's training program. I have in-depth knowledge and skills, enabling me to contribute to Android projects efficiently."
+          "name": "Firebase",
+          "icon": "https://skillicons.dev/icons?i=firebase"
         },
         {
-            "name": "Kotlin by Sololearn",
-            "link": "https://www.sololearn.com/certificates/CT-KJJXABZT",
-            "description": "I have got the Kotlin certification from Sololearn, demonstrating my proficiency in this programming language."
+          "name": "GCP",
+          "icon": "https://skillicons.dev/icons?i=gcp"
+        }
+      ]
+    },
+    {
+      "category": "Tools & DevOps",
+      "items": [
+        {
+          "name": "Git",
+          "icon": "https://skillicons.dev/icons?i=git"
         },
         {
-            "name": "SQL by Sololearn",
-            "link": "https://www.sololearn.com/certificates/CT-YXE3R6YH",
-            "description": "I have got a certification in SQL from Sololearn, showcasing my proficiency in this widely used database language."
+          "name": "Bash",
+          "icon": "https://skillicons.dev/icons?i=bash"
         },
         {
-            "name": "HTML by Sololearn",
-            "link": "https://www.sololearn.com/certificates/CT-JSTSEUHR",
-            "description": "Certified in HTML by Sololearn, a recognized authority in online education."
+          "name": "PowerShell",
+          "icon": "https://skillicons.dev/icons?i=powershell"
         }
-    ],
-    "awards": [
+      ]
+    },
+    {
+      "category": "Documentation",
+      "items": [
         {
-            "name": "Google Students Solution Challenge: Global Top 100",
-            "year": "2023",
-            "link": "https://developers.google.com/community/gdsc-solution-challenge/winners",
-            "certificate": "https://drive.google.com/file/d/1xEYsKK0eqwTqkRtKCkJadCtuFDsU65aX/view?usp=drive_link",
-            "description": "I'm honored to be a Top 100 Global Finalist in the esteemed Google Student Solution Challenge. This award recognizes my innovative mindset and exceptional problem-solving skills, as I've created a solution that addresses pertinent real-world challenges. My selection from a pool of talented individuals underscores my dedication to developing solutions that drive meaningful change."
+          "name": "Writerside IDE",
+          "icon": "https://skillicons.dev/icons?i=idea"
+        },
+        {
+          "name": "Markdown",
+          "icon": "https://skillicons.dev/icons?i=md"
+        },
+        {
+          "name": "XML",
+          "icon": "https://skillicons.dev/icons?i=html"
         }
-    ]
+      ]
+    },
+    {
+      "category": "Engineering Practices",
+      "items": [
+        {
+          "name": "Algorithm Design",
+          "icon": "https://skillicons.dev/icons?i=cs"
+        },
+        {
+          "name": "Unit Testing",
+          "icon": "https://skillicons.dev/icons?i=jest"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Full Stack Software Developer",
+      "company": "Arkcess Care",
+      "location": "Perris, California, United States",
+      "year": "January 2024—Present",
+      "type": "Remote - Full-time",
+      "description": "Cross-Platform Development: Engineered responsive Flutter applications with unified codebases for web platforms.\nFirebase Integration: Implemented comprehensive backend solutions using Firebase services including Authentication, Firestore, and Cloud Functions to create scalable and secure applications.\nAI Integration: Implemented AI services such as resume summary generation using Google’s Gemini AI developer API on server side, with Node.js.\nPayment Gateway: Integrated Stripe financial services such as invoicing, subscription and one-time checkout. Ensuring secure payment in our web app.\nUI/UX Implementation: Translated wireframes and design mockups into user interfaces using Flutter's widget system and custom animations.\nTechnical Leadership: Led architecture planning sessions and provided guidance to fellow developers on Flutter best practices and state management approaches.\nAPI Development: Designed and implemented RESTful APIs using Node.js and Firebase Cloud Functions to support web client applications.\nPerformance Optimization: Conducted code reviews and performance profiling to identify and resolve bottlenecks, improving application load time by 30%.\nUser Support Systems: Created in-app feedback mechanisms and analytics integrations to gather user insights and prioritize feature development.\nCI/CD Pipeline Management: Established automated testing and deployment workflows to ensure consistent quality across all application releases."
+    },
+    {
+      "role": "Native Android Developer (Seasonal)",
+      "company": "AnchorMiles",
+      "location": "Garden Estate, Thika Road, NRB",
+      "year": "January 2023—Present",
+      "type": "",
+      "description": "Native Android Development: Built feature-rich Android applications using Kotlin and Jetpack Compose, following Material Design principles and MVVM architecture.\nReal-time Data Synchronization: Integrated Firebase Realtime Database and Firestore for seamless offline-first experiences with conflict resolution.\nCompose UI Implementation: Leveraged Jetpack Compose to create modern, declarative user interfaces with custom theming and animations.\nAuthentication Systems: Implemented secure multi-factor authentication flows using Firebase Authentication and custom token management.\nBackground Processing: Developed efficient background services for data synchronization and push notification handling using WorkManager.\nCode Migration: Successfully migrated legacy XML-based layouts to Jetpack Compose, improving development velocity and code maintainability.\nAnalytics Integration: Implemented comprehensive user analytics using Firebase Analytics to track engagement metrics and feature adoption.\nSDK Integration: Seamlessly integrated third-party libraries and payment gateways for enhanced application functionality."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Diploma in Information Technology",
+      "school": "KCA University | Ruaraka, Nairobi",
+      "year": "September 2021—December 2023",
+      "description": "Relevant Units:\nDIT 104: Computer organization and architecture\nDIT 305: Programming methodology\nDIT 406: Data structures and algorithms\nDIT 409: Java Programming\nDIT 504: Application programming"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Android Development by Google Africa Developer Training Program",
+      "link": "https://drive.google.com/file/d/1Ba77okpo-5xhgO5wCyBb_EdjLWg1-uWQ/view?usp=sharing",
+      "description": "I have an Android Development certification from Google's training program. I have in-depth knowledge and skills, enabling me to contribute to Android projects efficiently."
+    },
+    {
+      "name": "Kotlin by Sololearn",
+      "link": "https://www.sololearn.com/certificates/CT-KJJXABZT",
+      "description": "I have got the Kotlin certification from Sololearn, demonstrating my proficiency in this programming language."
+    },
+    {
+      "name": "SQL by Sololearn",
+      "link": "https://www.sololearn.com/certificates/CT-YXE3R6YH",
+      "description": "I have got a certification in SQL from Sololearn, showcasing my proficiency in this widely used database language."
+    },
+    {
+      "name": "HTML by Sololearn",
+      "link": "https://www.sololearn.com/certificates/CT-JSTSEUHR",
+      "description": "Certified in HTML by Sololearn, a recognized authority in online education."
+    }
+  ],
+  "awards": [
+    {
+      "name": "Google Students Solution Challenge: Global Top 100",
+      "year": "2023",
+      "link": "https://developers.google.com/community/gdsc-solution-challenge/winners",
+      "certificate": "https://drive.google.com/file/d/1xEYsKK0eqwTqkRtKCkJadCtuFDsU65aX/view?usp=drive_link",
+      "description": "I'm honored to be a Top 100 Global Finalist in the esteemed Google Student Solution Challenge. This award recognizes my innovative mindset and exceptional problem-solving skills, as I've created a solution that addresses pertinent real-world challenges. My selection from a pool of talented individuals underscores my dedication to developing solutions that drive meaningful change."
+    }
+  ]
 }
