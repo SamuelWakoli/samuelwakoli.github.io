@@ -59,8 +59,16 @@ export const Experience = () => {
                     {exp.year}
                   </time>
                 </div>
-                <div className="text-blue-400 font-medium mb-3 text-sm">
-                  {exp.company}
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 mb-3 text-sm">
+                  <div className="text-blue-400 font-medium whitespace-nowrap">
+                    {exp.company}
+                  </div>
+                  {exp.location && (
+                    <div className="text-slate-500 font-medium">
+                      <span className="hidden sm:inline mx-1">—</span>
+                      <span>{exp.location}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="text-slate-400 text-sm leading-relaxed">
                   {formatDescription(exp.description)}

@@ -73,9 +73,15 @@ export const ExperienceCard = () => {
                 {exp.year}
               </span>
             </div>
-            <div className="text-blue-400/80 text-sm font-medium mb-4 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50"></span>
+            <div className="text-blue-400/80 text-sm font-medium mb-4 flex items-center gap-2 flex-wrap">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 shrink-0"></span>
               {exp.company}
+              {exp.location && (
+                <div className="text-slate-500 text-xs font-medium">
+                  <span className="mx-1">—</span>
+                  {exp.location}
+                </div>
+              )}
             </div>
             <div className="text-slate-400 text-sm leading-relaxed glass p-5 rounded-2xl border border-white/5 hover:border-white/10 transition-colors shadow-inner">
               {formatDescription(exp.description)}

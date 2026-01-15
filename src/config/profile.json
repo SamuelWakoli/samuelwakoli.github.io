@@ -149,7 +149,7 @@
     {
       "role": "Native Android Developer (Seasonal)",
       "company": "AnchorMiles",
-      "location": "Garden Estate, Thika Road, NRB",
+      "location": "Garden Estate, Thika Road, Nairobi",
       "year": "January 2023—Present",
       "type": "",
       "description": "Native Android Development: Built feature-rich Android applications using Kotlin and Jetpack Compose, following Material Design principles and MVVM architecture.\nReal-time Data Synchronization: Integrated Firebase Realtime Database and Firestore for seamless offline-first experiences with conflict resolution.\nCompose UI Implementation: Leveraged Jetpack Compose to create modern, declarative user interfaces with custom theming and animations.\nAuthentication Systems: Implemented secure multi-factor authentication flows using Firebase Authentication and custom token management.\nBackground Processing: Developed efficient background services for data synchronization and push notification handling using WorkManager.\nCode Migration: Successfully migrated legacy XML-based layouts to Jetpack Compose, improving development velocity and code maintainability.\nAnalytics Integration: Implemented comprehensive user analytics using Firebase Analytics to track engagement metrics and feature adoption.\nSDK Integration: Seamlessly integrated third-party libraries and payment gateways for enhanced application functionality."
