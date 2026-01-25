@@ -1,15 +1,13 @@
 {
   "name": "Samuel Wakoli",
   "role": "Full Stack Developer (Backend Heavy)",
-  "bio": "I am a self-taught full-stack software developer with over three years of specialized experience in mobile application development, proficient in Flutter and native Android development using Kotlin as my primary programming language, complemented by expertise in Dart and JavaScript. My technical stack encompasses Jetpack Compose for Android front-end development and Flutter for cross-platform solutions, while leveraging Firebase and Google Cloud Platform for robust back-end infrastructure. I bring a persistent and logical approach to problem-solving, coupled with a commitment to continuous learning and adopting emerging technologies, with the career objective of advancing my expertise while delivering meaningful impact within a dynamic development environment.",
+  "bio": "Senior software developer with over five years of  specialized experience in mobile application development, proficient in Flutter and native Android development using Kotlin as my primary programming language, complemented by expertise in Dart and JavaScript. My technical stack encompasses Agent Development Kit for AI agents, Jetpack Compose for Android front-end development and Flutter for cross-platform solutions, while leveraging Firebase and Google Cloud Platform for robust back-end infrastructure. I bring a persistent and logical approach to problem-solving, coupled with a commitment to continuous learning and adopting emerging technologies, with the career objective of advancing my expertise while delivering meaningful impact within a dynamic development environment.",
   "location": "Nairobi, Kenya",
   "avatar": "/profile.png",
   "social": {
     "github": "https://github.com/samuelwakoli",
     "linkedin": "https://www.linkedin.com/in/samuelwakoli/",
-    "google_play": "https://play.google.com/store/apps/dev?id=5163633591987733044",
-    "google_dev": "https://g.dev/samuelwakoli",
-    "email": "swwakoli@gmail.com",
+    "email": "samwwakoli@gmail.com",
     "phone": "+254797228948"
   },
   "skills": [
@@ -140,6 +138,14 @@
   "experience": [
     {
       "role": "Full Stack Software Developer",
+      "company": "Xandria Learn",
+      "location": "Applewood Adams Ngong Road, Nairobi",
+      "year": "June 2025-Present",
+      "type": "Remote",
+      "description": "AI Integration: Implemented AI workflows using GenKi and Firebase AI logic.\nPayment Gateway: Integrated Paystack for secure payment collection.\nUI/UX Implementation: Built UI using Material Design 3.\nTechnical Leadership: Led architecture planning sessions.\nAPI Development: Designed and implemented RESTful APIs using Node.js and Firebase Cloud Functions to support web client applications."
+    },
+    {
+      "role": "Full Stack Software Developer",
       "company": "Arkcess Care",
       "location": "Perris, California, United States",
       "year": "January 2024—Present",
@@ -160,7 +166,7 @@
       "degree": "Diploma in Information Technology",
       "school": "KCA University | Ruaraka, Nairobi",
       "year": "September 2021—December 2023",
-      "description": "Relevant Units:\nDIT 104: Computer organization and architecture\nDIT 305: Programming methodology\nDIT 406: Data structures and algorithms\nDIT 409: Java Programming\nDIT 504: Application programming"
+      "description": "Relevant Units:\nComputer organization and architecture\nProgramming methodology\nData structures and algorithms\nJava Programming\nApplication programming"
     }
   ],
   "certifications": [
@@ -191,7 +197,7 @@
       "year": "2023",
       "link": "https://developers.google.com/community/gdsc-solution-challenge/winners",
       "certificate": "https://drive.google.com/file/d/1FpnuHrKHu9spUKFKVjA8nwmmaUlpjNik/view?usp=sharing",
-      "description": "I'm honored to be a Top 100 Global Finalist in the esteemed Google Student Solution Challenge. This award recognizes my innovative mindset and exceptional problem-solving skills, as I've created a solution that addresses pertinent real-world challenges. My selection from a pool of talented individuals underscores my dedication to developing solutions that drive meaningful change."
+      "description": "I'm honored to be a Top 100 Global Finalist in the esteemed Google Student Solution Challenge. This award recognizes my innovative mindset and exceptional problem-solving skills, as I've contributed to creating a solution that addresses pertinent real-world challenges."
     }
   ]
 }
