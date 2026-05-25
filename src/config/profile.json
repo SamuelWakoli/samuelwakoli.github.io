@@ -169,6 +169,26 @@
       "description": "Relevant Units:\nComputer organization and architecture\nProgramming methodology\nData structures and algorithms\nJava Programming\nApplication programming"
     }
   ],
+  "projects": [
+    {
+      "name": "Xandria Learn",
+      "url": "https://xandrialearning.com",
+      "stage": "Stable",
+      "description": "An education technology platform designed to personalize learning and support teachers with AI-powered tutoring, automated assessments, and centralized dashboards while preserving human connection in the classroom."
+    },
+    {
+      "name": "Aurora",
+      "url": "https://be-guided-be-inspired.web.app/",
+      "stage": "Release Candidate",
+      "description": "A community platform for women aged 40-60 navigating menopause, divorce, chronic pain, childhood trauma, and other major life transitions, extended through the BGBI app for story-sharing, support, and resource access."
+    },
+    {
+      "name": "Mema",
+      "url": "https://primecore-mema.web.app/",
+      "stage": "Alpha",
+      "description": "A micro-enterprise management application for Kenyan SMEs that streamlines inventory, sales, tax compliance, MPesa payments, customer relationships, analytics, and offline-first operations on phones and tablets."
+    }
+  ],
   "certifications": [
     {
       "name": "Android Development by Google Africa Developer Training Program",

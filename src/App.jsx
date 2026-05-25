@@ -10,6 +10,7 @@ import {
 import { AwardsCard } from "./components/bento/AwardsCard";
 import { SocialCard } from "./components/bento/SocialCard";
 import { LanguagesCard } from "./components/bento/LanguagesCard";
+import { ProjectsCard } from "./components/bento/ProjectsCard";
 import { motion, AnimatePresence } from "framer-motion";
 
 const sectionVariants = {
@@ -72,7 +73,28 @@ function App() {
             <ExperienceCard />
           </motion.div>
 
-          {/* Education Section containing nested subsections */}
+          <motion.div
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            id="education"
+            className="grid grid-cols-1 md:grid-cols-12 gap-6"
+          >
+            <EducationCard />
+          </motion.div>
+
+          <motion.div
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            id="projects"
+            className="grid grid-cols-1 md:grid-cols-12 gap-6"
+          >
+            <ProjectsCard />
+          </motion.div>
+
           <motion.div
             variants={sectionVariants}
             initial="hidden"
@@ -80,17 +102,11 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
             className="grid grid-cols-1 md:grid-cols-12 gap-6"
           >
-            <div id="education" className="col-span-12">
-              <EducationCard />
+            <div id="certifications" className="col-span-12 md:col-span-6">
+              <CertificationCard />
             </div>
-
-            <div className="col-span-12 md:col-span-6 space-y-6">
-              <div id="certifications">
-                <CertificationCard />
-              </div>
-              <div id="awards">
-                <AwardsCard />
-              </div>
+            <div id="awards" className="col-span-12 md:col-span-6">
+              <AwardsCard />
             </div>
           </motion.div>
 
