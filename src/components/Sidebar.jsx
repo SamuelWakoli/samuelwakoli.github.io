@@ -105,12 +105,12 @@ const NavigationHeader = ({ showAvatar, onClose }) => {
           <motion.div
             initial={false}
             animate={{
-              width: showAvatar ? 42 : 0,
+              width: showAvatar ? 40 : 0,
               opacity: showAvatar ? 1 : 0,
               marginRight: showAvatar ? 0 : -12,
             }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="h-10 shrink-0 overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/70 shadow-lg shadow-slate-950/40"
+            className="h-10 shrink-0 overflow-hidden rounded-full border border-slate-800/80 bg-slate-900/70 shadow-lg shadow-slate-950/40"
           >
             <img
               src={profile.avatar}
