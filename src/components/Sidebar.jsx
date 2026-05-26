@@ -55,8 +55,70 @@ const themeLabelMap = {
   dark: "Dark",
 };
 
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+let scrollAnimationFrame = 0;
+let restoreScrollBehavior = () => {};
+
 const prefersReducedMotion = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const stopAnimatedScroll = () => {
+  if (scrollAnimationFrame) {
+    window.cancelAnimationFrame(scrollAnimationFrame);
+    scrollAnimationFrame = 0;
+  }
+
+  restoreScrollBehavior();
+  restoreScrollBehavior = () => {};
+};
+
+const easeInOutCubic = (progress) =>
+  progress < 0.5
+    ? 4 * progress * progress * progress
+    : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+const animatePageScroll = (targetY) => {
+  stopAnimatedScroll();
+
+  const root = document.documentElement;
+  const maxScrollY = Math.max(0, root.scrollHeight - window.innerHeight);
+  const finalY = clamp(targetY, 0, maxScrollY);
+  const startY = window.scrollY;
+  const distance = finalY - startY;
+
+  if (prefersReducedMotion() || Math.abs(distance) < 6) {
+    window.scrollTo({ top: finalY, behavior: "auto" });
+    return;
+  }
+
+  const previousScrollBehavior = root.style.scrollBehavior;
+  root.style.scrollBehavior = "auto";
+  restoreScrollBehavior = () => {
+    root.style.scrollBehavior = previousScrollBehavior;
+  };
+
+  const duration = clamp(450 + Math.abs(distance) * 0.45, 650, 2200);
+  const startTime = performance.now();
+
+  const step = (time) => {
+    const progress = clamp((time - startTime) / duration, 0, 1);
+    const easedProgress = easeInOutCubic(progress);
+    const nextY = startY + distance * easedProgress;
+
+    window.scrollTo({ top: nextY, behavior: "auto" });
+
+    if (progress < 1) {
+      scrollAnimationFrame = window.requestAnimationFrame(step);
+      return;
+    }
+
+    window.scrollTo({ top: finalY, behavior: "auto" });
+    stopAnimatedScroll();
+  };
+
+  scrollAnimationFrame = window.requestAnimationFrame(step);
+};
 
 const navigateToSection = (event, id, onNavigate) => {
   if (
@@ -75,11 +137,10 @@ const navigateToSection = (event, id, onNavigate) => {
   const section = document.getElementById(id);
   if (!section) return;
 
+  const targetY = section.getBoundingClientRect().top + window.scrollY - 16;
+
   window.requestAnimationFrame(() => {
-    section.scrollIntoView({
-      behavior: prefersReducedMotion() ? "auto" : "smooth",
-      block: "start",
-    });
+    animatePageScroll(targetY);
   });
 
   const hash = `#${id}`;
