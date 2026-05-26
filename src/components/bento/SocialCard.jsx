@@ -1,10 +1,53 @@
 import { Card } from "../Card";
 import profile from "../../config/profile.json";
-import { Mail, Phone, MessageCircle } from "lucide-react";
+import {
+  Mail,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
+const contactItems = (whatsappLink) => [
+  {
+    href: `mailto:${profile.social.email}`,
+    icon: Mail,
+    label: "Email",
+    value: profile.social.email,
+  },
+  {
+    href: `tel:${profile.social.phone}`,
+    icon: Phone,
+    label: "Phone",
+    value: profile.social.phone,
+  },
+  {
+    href: whatsappLink,
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "Chat on WhatsApp",
+    target: "_blank",
+  },
+];
+
+const socialItems = [
+  {
+    href: profile.social.github,
+    icon: "https://skillicons.dev/icons?i=github",
+    label: "GitHub",
+  },
+  {
+    href: profile.social.linkedin,
+    icon: "https://skillicons.dev/icons?i=linkedin",
+    label: "LinkedIn",
+  },
+  {
+    href: profile.social.twitter,
+    icon: "/x-logo.svg",
+    label: "X",
+  },
+].filter((item) => item.href);
+
 export const SocialCard = () => {
-  // Helper for WhatsApp link
   const whatsappLink = `https://wa.me/${profile.social.phone.replace("+", "")}`;
 
   const containerVariants = {
@@ -22,12 +65,11 @@ export const SocialCard = () => {
       className="col-span-12 md:col-span-12 row-span-1 group/social"
       noPadding
     >
-      <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-800/50">
-        {/* 1. Contact Section */}
+      <div className="theme-divider grid divide-y md:grid-cols-2 md:divide-x md:divide-y-0">
         <div className="p-6 md:p-8 space-y-6">
-          <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+          <h3 className="theme-title mb-4 flex items-center gap-3 text-xl font-bold">
             Contact Details
-            <span className="h-px flex-1 bg-gradient-to-r from-slate-800 to-transparent"></span>
+            <span className="h-px flex-1 bg-gradient-to-r from-[var(--divider)] to-transparent"></span>
           </h3>
 
           <motion.div
@@ -37,48 +79,24 @@ export const SocialCard = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            {[
-              {
-                href: `mailto:${profile.social.email}`,
-                icon: Mail,
-                label: "Email",
-                value: profile.social.email,
-                color: "blue",
-              },
-              {
-                href: `tel:${profile.social.phone}`,
-                icon: Phone,
-                label: "Phone",
-                value: profile.social.phone,
-                color: "green",
-              },
-              {
-                href: whatsappLink,
-                icon: MessageCircle,
-                label: "WhatsApp",
-                value: "Chat on WhatsApp",
-                color: "emerald",
-                target: "_blank",
-              },
-            ].map((contact, idx) => (
+            {contactItems(whatsappLink).map((contact, idx) => (
               <motion.a
                 key={idx}
                 variants={itemVariants}
                 href={contact.href}
                 target={contact.target}
+                rel={contact.target ? "noreferrer" : undefined}
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-4 group/item"
+                className="group/item flex items-center gap-4"
               >
-                <div
-                  className={`p-3 bg-${contact.color}-500/10 rounded-lg text-${contact.color}-400 group-hover/item:bg-${contact.color}-500 group-hover/item:text-white transition-all duration-300`}
-                >
-                  <contact.icon size={20} />
+                <div className="theme-icon-surface flex h-11 w-11 items-center justify-center rounded-xl">
+                  <contact.icon size={20} className="theme-accent" />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 uppercase tracking-wider">
+                  <p className="theme-muted text-xs uppercase tracking-wider">
                     {contact.label}
                   </p>
-                  <p className="text-slate-200 font-medium group-hover/item:text-white transition-colors">
+                  <p className="theme-title font-medium transition-colors group-hover/item:text-[var(--accent)]">
                     {contact.value}
                   </p>
                 </div>
@@ -87,12 +105,11 @@ export const SocialCard = () => {
           </motion.div>
         </div>
 
-        {/* 2. Social Section */}
-        <div className="p-6 md:p-8 bg-slate-900/20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover/social:opacity-100 transition-opacity"></div>
-          <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-10">
+        <div className="relative overflow-hidden p-4 md:p-5">
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-soft)] to-[rgba(124,58,237,0.08)] opacity-0 transition-opacity group-hover/social:opacity-100"></div>
+          <h3 className="theme-title relative z-10 mb-4 flex items-center gap-3 text-lg font-bold md:text-xl">
             Social Profiles
-            <span className="h-px flex-1 bg-gradient-to-r from-slate-800 to-transparent"></span>
+            <span className="h-px flex-1 bg-gradient-to-r from-[var(--divider)] to-transparent"></span>
           </h3>
 
           <motion.div
@@ -100,70 +117,33 @@ export const SocialCard = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-4 relative z-10"
+            className="relative z-10 grid grid-cols-2 gap-3 sm:grid-cols-3"
           >
-            {[
-              {
-                href: profile.social.linkedin,
-                icon: "linkedin",
-                label: "LinkedIn",
-                color: "blue",
-              },
-              {
-                href: profile.social.github,
-                icon: "github",
-                label: "GitHub",
-                color: "slate",
-              },
-              {
-                href: profile.social.google_play,
-                icon: "https://www.innovados.com/wp-content/uploads/google-play-logo-nuevo.png",
-                label: "Play Store",
-                isImg: true,
-                color: "green",
-              },
-              {
-                href: profile.social.google_dev,
-                icon: "https://static.vecteezy.com/system/resources/previews/072/678/272/non_2x/google-developers-logo-icon-free-png.png",
-                label: "Developers",
-                isImg: true,
-                isDev: true,
-                color: "blue",
-              },
-            ].map(
-              (social, idx) =>
-                social.href && (
-                  <motion.a
-                    key={idx}
-                    variants={itemVariants}
-                    href={social.href}
-                    target="_blank"
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    className={`flex flex-col items-center justify-center p-4 bg-slate-800/40 rounded-xl hover:bg-${social.color}-900/20 hover:border-${social.color}-500/50 border border-slate-800/50 transition-all group/icon gap-3`}
-                  >
-                    {social.isImg ? (
-                      <div
-                        className={`${social.isDev ? "w-8 h-8 background-white rounded-full p-1 overflow-hidden" : "h-8"} flex items-center justify-center`}
-                      >
-                        <img
-                          src={social.icon}
-                          alt={social.label}
-                          className={`${social.isDev ? "w-full h-full object-contain" : "h-full object-contain"} group-hover/icon:scale-110 transition-transform`}
-                        />
-                      </div>
-                    ) : (
-                      <img
-                        src={`https://skillicons.dev/icons?i=${social.icon}`}
-                        alt={social.label}
-                        className="w-8 h-8 group-hover/icon:scale-110 transition-transform"
-                      />
-                    )}
-                    <span className="text-[10px] text-slate-500 group-hover/icon:text-slate-200 uppercase tracking-widest transition-colors">
-                      {social.label}
-                    </span>
-                  </motion.a>
-                ),
-            )}
+            {socialItems.map((social, idx) => (
+              <motion.a
+                key={idx}
+                variants={itemVariants}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="theme-surface theme-surface-hover group/icon flex min-h-[104px] flex-col items-center justify-center gap-2.5 rounded-2xl p-4 text-center transition-all"
+              >
+                <div className="theme-icon-surface flex h-11 w-11 items-center justify-center rounded-xl">
+                  <img
+                    src={social.icon}
+                    alt={social.label}
+                    className="h-6 w-6 transition-transform duration-300 group-hover/icon:scale-110"
+                  />
+                </div>
+
+                <div className="min-w-0">
+                  <p className="theme-title text-xs font-semibold uppercase tracking-[0.14em]">
+                    {social.label}
+                  </p>
+                </div>
+              </motion.a>
+            ))}
           </motion.div>
         </div>
       </div>

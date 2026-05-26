@@ -11,7 +11,8 @@ import { AwardsCard } from "./components/bento/AwardsCard";
 import { SocialCard } from "./components/bento/SocialCard";
 import { LanguagesCard } from "./components/bento/LanguagesCard";
 import { ProjectsCard } from "./components/bento/ProjectsCard";
-import { motion, AnimatePresence } from "framer-motion";
+import { MatrixBackground } from "./components/MatrixBackground";
+import { motion } from "framer-motion";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -24,8 +25,9 @@ const sectionVariants = {
 
 function App() {
   return (
-    <div className="bg-[#020617] min-h-screen text-slate-300 selection:bg-blue-500/30 font-sans flex">
+    <div className="relative isolate flex min-h-screen overflow-hidden bg-[var(--page-bg)] font-sans text-[var(--text-secondary)] selection:bg-[var(--accent-soft)] selection:text-[var(--text-primary)]">
       <CustomCursor />
+      <MatrixBackground />
       {/* 1. Sidebar (Desktop) */}
       <Sidebar />
 
@@ -36,7 +38,7 @@ function App() {
       <motion.main
         initial="hidden"
         animate="visible"
-        className="flex-1 p-4 md:p-8 lg:p-12 scroll-smooth"
+        className="relative z-10 flex-1 p-4 md:p-8 lg:p-12 scroll-smooth"
       >
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Bento Grid Layout */}
@@ -100,14 +102,21 @@ function App() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
+            id="certifications"
             className="grid grid-cols-1 md:grid-cols-12 gap-6"
           >
-            <div id="certifications" className="col-span-12 md:col-span-6">
-              <CertificationCard />
-            </div>
-            <div id="awards" className="col-span-12 md:col-span-6">
-              <AwardsCard />
-            </div>
+            <CertificationCard />
+          </motion.div>
+
+          <motion.div
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            id="awards"
+            className="grid grid-cols-1 md:grid-cols-12 gap-6"
+          >
+            <AwardsCard />
           </motion.div>
 
           <motion.div
@@ -121,7 +130,7 @@ function App() {
             <SocialCard />
           </motion.div>
 
-          <footer className="text-center text-slate-600 text-sm py-12">
+          <footer className="theme-muted py-12 text-center text-sm">
             <p>
               © {new Date().getFullYear()} Samuel Wakoli. Built with React &
               Tailwind.

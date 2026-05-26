@@ -6,34 +6,35 @@ export const AwardsCard = () => {
   if (!profile.awards || profile.awards.length === 0) return null;
 
   return (
-    <Card className="col-span-12 md:col-span-6 row-span-1 bg-gradient-to-br from-yellow-900/10 to-transparent">
+    <Card className="col-span-12 md:col-span-12 row-span-1">
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-2 bg-yellow-500/10 rounded-lg text-yellow-400">
+        <div className="theme-icon-surface rounded-lg p-2 text-[var(--warning)]">
           <Trophy size={20} />
         </div>
-        <h3 className="text-xl font-bold text-white">Awards</h3>
+        <h3 className="theme-title text-xl font-bold">Awards</h3>
       </div>
 
       <div className="space-y-6">
         {profile.awards.map((award, index) => (
           <div key={index} className="group">
-            <h4 className="text-lg font-medium text-white group-hover:text-yellow-400 transition-colors">
+            <h4 className="theme-title text-lg font-medium transition-colors group-hover:text-[var(--warning)]">
               {award.name}
             </h4>
             <div className="flex justify-between items-center mt-1 mb-2">
-              <span className="text-slate-500 text-xs">{award.issuer}</span>
-              <span className="text-slate-600 text-xs font-mono">
+              <span className="theme-muted text-xs">{award.issuer}</span>
+              <span className="theme-subtle text-xs font-mono">
                 {award.year}
               </span>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <p className="theme-muted text-sm leading-relaxed">
               {award.description}
             </p>
             {award.link && (
               <a
                 href={award.link}
                 target="_blank"
-                className="inline-flex items-center gap-1 text-yellow-500/80 text-xs mt-3 hover:text-yellow-400 transition-colors"
+                rel="noreferrer"
+                className="mt-3 inline-flex items-center gap-1 text-xs text-[var(--warning)] transition-colors hover:opacity-80"
               >
                 View Details <ExternalLink size={10} />
               </a>

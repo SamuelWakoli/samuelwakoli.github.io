@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/profile-rounded.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     <title>Samuel Wakoli | Full Stack Developer</title>
     <meta
       name="description"
@@ -70,6 +71,35 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      (() => {
+        const storageKey = "samuelwakoli-theme";
+        const mediaQuery = "(prefers-color-scheme: dark)";
+
+        try {
+          const root = document.documentElement;
+          const storedTheme = localStorage.getItem(storageKey);
+          const theme =
+            storedTheme === "light" || storedTheme === "dark"
+              ? storedTheme
+              : "system";
+          const resolvedTheme =
+            theme === "system"
+              ? window.matchMedia(mediaQuery).matches
+                ? "dark"
+                : "light"
+              : theme;
+
+          root.dataset.theme = resolvedTheme;
+          root.dataset.themePreference = theme;
+          root.style.colorScheme = resolvedTheme;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+          document.documentElement.dataset.themePreference = "system";
+          document.documentElement.style.colorScheme = "dark";
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

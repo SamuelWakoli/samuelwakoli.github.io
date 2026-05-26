@@ -7,6 +7,7 @@
   "social": {
     "github": "https://github.com/samuelwakoli",
     "linkedin": "https://www.linkedin.com/in/samuelwakoli/",
+    "twitter": "https://x.com/samwrotethecode",
     "email": "samwwakoli@gmail.com",
     "emailSecondary": "swwakoli@outlook.com",
     "phone": "+254797228948",
@@ -108,11 +109,11 @@
       "items": [
         {
           "name": "Agent Development Kit (ADK)",
-          "icon": "https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/gemini-app-icon-hd.png"
+          "icon": "https://adk.dev/assets/agent-development-kit.png"
         },
         {
           "name": "Genkit",
-          "icon": "https://avatars.githubusercontent.com/u/166032008?v=4"
+          "icon": "https://avatars.githubusercontent.com/u/166032008"
         },
         {
           "name": "Firebase AI Logic",
@@ -125,7 +126,7 @@
       "items": [
         {
           "name": "Writerside IDE",
-          "icon": "https://mosaic.ee/wp-content/uploads/2024/08/Writerside-icon.png"
+          "icon": "https://plugins.jetbrains.com/files/20158/1012603/icon/default.png"
         },
         {
           "name": "XML & Markdown",

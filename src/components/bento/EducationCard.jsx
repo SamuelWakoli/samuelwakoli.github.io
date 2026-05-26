@@ -7,10 +7,10 @@ export const EducationCard = () => {
   return (
     <Card className="col-span-12 md:col-span-12 row-span-1 group/edu">
       <div className="flex items-center gap-3 mb-8">
-        <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400 group-hover/edu:scale-110 transition-transform">
+        <div className="theme-icon-surface rounded-lg p-2 group-hover/edu:scale-110 transition-transform">
           <GraduationCap size={20} />
         </div>
-        <h3 className="text-xl font-bold text-white uppercase tracking-wider">
+        <h3 className="theme-title text-xl font-bold uppercase tracking-wider">
           Education
         </h3>
       </div>
@@ -20,16 +20,16 @@ export const EducationCard = () => {
           <motion.div
             key={index}
             whileHover={{ x: 5 }}
-            className="relative pl-6 border-l-2 border-slate-800 hover:border-blue-500 transition-colors"
+            className="relative border-l-2 border-[color:var(--timeline)] pl-6 transition-colors hover:border-[var(--accent)]"
           >
-            <div className="absolute -left-[6px] top-2 w-2.5 h-2.5 rounded-full bg-blue-500/50 group-hover/edu:bg-blue-500 transition-colors"></div>
-            <h4 className="text-white font-bold text-lg">{edu.school}</h4>
-            <p className="text-blue-300 font-medium mb-1">{edu.degree}</p>
-            <span className="text-slate-500 text-[10px] font-mono uppercase tracking-[0.2em] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800/50 mb-3 inline-block">
+            <div className="absolute -left-[6px] top-2 h-2.5 w-2.5 rounded-full bg-[var(--accent-soft-strong)] transition-colors group-hover/edu:bg-[var(--accent)]"></div>
+            <h4 className="theme-title text-lg font-bold">{edu.school}</h4>
+            <p className="theme-accent mb-1 font-medium">{edu.degree}</p>
+            <span className="theme-surface theme-muted mb-3 inline-block rounded px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.2em]">
               {edu.year}
             </span>
             {edu.description && (
-              <div className="text-slate-400 text-sm leading-relaxed whitespace-pre-line glass p-5 rounded-2xl mt-2 border border-white/5 hover:border-white/10 shadow-inner">
+              <div className="theme-muted glass mt-2 rounded-2xl p-5 text-sm leading-relaxed whitespace-pre-line">
                 {edu.description}
               </div>
             )}
@@ -42,12 +42,12 @@ export const EducationCard = () => {
 
 export const CertificationCard = () => {
   return (
-    <Card className="col-span-12 md:col-span-6 row-span-1 group/cert">
+    <Card className="col-span-12 md:col-span-12 row-span-1 group/cert">
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-2 bg-purple-500/10 rounded-lg text-purple-400 group-hover/cert:scale-110 transition-transform">
+        <div className="theme-icon-surface rounded-lg p-2 group-hover/cert:scale-110 transition-transform">
           <Award size={20} />
         </div>
-        <h3 className="text-xl font-bold text-white uppercase tracking-wider">
+        <h3 className="theme-title text-xl font-bold uppercase tracking-wider">
           Certifications
         </h3>
       </div>
@@ -58,23 +58,24 @@ export const CertificationCard = () => {
             key={index}
             href={cert.link}
             target="_blank"
+            rel="noreferrer"
             whileHover={{ scale: 1.02, y: -2 }}
-            className="block group relative p-4 rounded-xl bg-slate-900/30 border border-slate-800/60 hover:border-purple-500/50 hover:bg-slate-800/40 transition-all overflow-hidden shadow-sm hover:shadow-purple-500/10"
+            className="theme-surface theme-surface-hover block group relative overflow-hidden rounded-xl p-4 shadow-sm"
           >
-            <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 bg-[rgba(124,58,237,0.08)] opacity-0 transition-opacity group-hover:opacity-100"></div>
             <div className="flex justify-between items-start relative z-10">
               <div className="flex-1">
-                <h4 className="text-slate-200 font-bold group-hover:text-purple-300 transition-colors text-base flex items-center gap-2">
+                <h4 className="theme-title flex items-center gap-2 text-base font-bold transition-colors group-hover:text-[var(--accent-secondary)]">
                   {cert.name}
                   <ExternalLink
                     size={14}
-                    className="opacity-0 group-hover/cert:opacity-100 transition-opacity text-purple-400"
+                    className="theme-accent opacity-0 transition-opacity group-hover/cert:opacity-100"
                   />
                 </h4>
               </div>
             </div>
             {cert.description && (
-              <p className="text-slate-400 text-[11px] mt-3 leading-relaxed relative z-10 border-t border-white/5 pt-3 group-hover:text-slate-300 transition-colors">
+              <p className="theme-muted theme-divider relative z-10 mt-3 border-t pt-3 text-[11px] leading-relaxed transition-colors group-hover:text-[var(--text-secondary)]">
                 {cert.description}
               </p>
             )}

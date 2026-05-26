@@ -48,7 +48,7 @@ export const Card = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       {...props}
-      className={`relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/50 backdrop-blur-xl ${className}`}
+      className={`theme-panel relative overflow-hidden rounded-3xl ${className}`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
@@ -59,7 +59,7 @@ export const Card = ({
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(56, 189, 248, 0.1), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, var(--accent-soft-strong), transparent 40%)`,
         }}
       />
       <div className={`relative h-full ${noPadding ? "" : "p-6 md:p-8"}`}>

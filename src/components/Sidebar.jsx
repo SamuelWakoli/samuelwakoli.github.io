@@ -12,8 +12,11 @@ import {
   Trophy,
   Mail,
   FileText,
+  Palette,
 } from "lucide-react";
 import profile from "../config/profile.json";
+import { ThemeDialog } from "./ThemeDialog";
+import { useTheme } from "../context/ThemeContext";
 
 const navLinks = [
   { icon: User, label: "Profile", href: "#home", id: "home" },
@@ -46,30 +49,104 @@ const navLinks = [
   { icon: Mail, label: "Contact", href: "#contact", id: "contact" },
 ];
 
-const useScrollSpy = (ids, offset = 100) => {
+const themeLabelMap = {
+  system: "Device",
+  light: "Light",
+  dark: "Dark",
+};
+
+const prefersReducedMotion = () =>
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const navigateToSection = (event, id, onNavigate) => {
+  if (
+    event.button !== 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.altKey ||
+    event.shiftKey
+  ) {
+    return;
+  }
+
+  event.preventDefault();
+  onNavigate?.();
+
+  const section = document.getElementById(id);
+  if (!section) return;
+
+  window.requestAnimationFrame(() => {
+    section.scrollIntoView({
+      behavior: prefersReducedMotion() ? "auto" : "smooth",
+      block: "start",
+    });
+  });
+
+  const hash = `#${id}`;
+  if (window.location.hash !== hash) {
+    window.history.pushState(null, "", hash);
+  }
+};
+
+const useScrollSpy = (ids, offset = 120) => {
   const [activeId, setActiveId] = useState("home");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: `-${offset}px 0px -50% 0px`, // Trigger when element is near top or takes up significant portion
-        threshold: 0.1,
-      },
-    );
+    let frameId = 0;
 
-    ids.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
+    const updateActiveSection = () => {
+      frameId = 0;
 
-    return () => observer.disconnect();
+      const threshold = offset;
+      const sections = ids
+        .map((id) => document.getElementById(id))
+        .filter(Boolean)
+        .map((section) => {
+          const rect = section.getBoundingClientRect();
+          return {
+            id: section.id,
+            top: rect.top,
+            bottom: rect.bottom,
+          };
+        })
+        .filter((section) => section.bottom > threshold);
+
+      if (!sections.length) return;
+
+      const isAtPageBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+
+      const sectionsAboveThreshold = sections.filter(
+        (section) => section.top <= threshold,
+      );
+      const nextActiveId = isAtPageBottom
+        ? sections.at(-1)?.id ?? ids.at(-1) ?? ids[0]
+        : sectionsAboveThreshold.at(-1)?.id ?? sections[0]?.id ?? ids[0];
+
+      setActiveId((currentId) =>
+        currentId === nextActiveId ? currentId : nextActiveId,
+      );
+    };
+
+    const scheduleUpdate = () => {
+      if (!frameId) {
+        frameId = window.requestAnimationFrame(updateActiveSection);
+      }
+    };
+
+    scheduleUpdate();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+
+    return () => {
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
+
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+    };
   }, [ids, offset]);
 
   return activeId;
@@ -97,6 +174,29 @@ const useSectionVisible = (id, threshold = 0.2) => {
   return isVisible;
 };
 
+const ThemeSettingsButton = ({ onClick }) => {
+  const { theme } = useTheme();
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={`Theme: ${themeLabelMap[theme]}`}
+      className="theme-surface theme-surface-hover flex h-11 w-full items-center justify-between gap-2 rounded-xl px-2.5 text-left"
+    >
+      <span className="flex items-center gap-3">
+        <span className="theme-icon-surface flex h-8 w-8 items-center justify-center rounded-lg">
+          <Palette size={15} className="theme-accent" />
+        </span>
+        <span className="theme-title text-sm font-medium">Theme</span>
+      </span>
+      <span className="theme-muted theme-icon-surface rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em]">
+        {themeLabelMap[theme]}
+      </span>
+    </button>
+  );
+};
+
 const NavigationHeader = ({ showAvatar, onClose }) => {
   return (
     <div className="mb-6 min-h-[52px] shrink-0">
@@ -110,7 +210,7 @@ const NavigationHeader = ({ showAvatar, onClose }) => {
               marginRight: showAvatar ? 0 : -12,
             }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="h-10 shrink-0 overflow-hidden rounded-full border border-slate-800/80 bg-slate-900/70 shadow-lg shadow-slate-950/40"
+            className="theme-surface h-10 shrink-0 overflow-hidden rounded-full"
           >
             <img
               src={profile.avatar}
@@ -120,10 +220,10 @@ const NavigationHeader = ({ showAvatar, onClose }) => {
           </motion.div>
 
           <div className="min-w-0">
-            <h1 className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-xl font-bold leading-none text-transparent">
+            <h1 className="text-gradient text-xl font-bold leading-none">
               {profile.name}
             </h1>
-            <p className="mt-1.5 text-[11px] leading-4 text-slate-500">
+            <p className="theme-muted mt-1.5 text-[11px] leading-4">
               {profile.role}
             </p>
           </div>
@@ -132,9 +232,9 @@ const NavigationHeader = ({ showAvatar, onClose }) => {
         {onClose && (
           <button
             onClick={onClose}
-            className="rounded-xl border border-slate-800 bg-slate-900 p-2 text-slate-400 transition-colors hover:text-white"
+            className="theme-surface theme-surface-hover rounded-xl p-2"
           >
-            <X size={18} />
+            <X size={18} className="theme-muted" />
           </button>
         )}
       </div>
@@ -143,6 +243,7 @@ const NavigationHeader = ({ showAvatar, onClose }) => {
 };
 
 export const Sidebar = () => {
+  const [isThemeDialogOpen, setThemeDialogOpen] = useState(false);
   const sectionIds = [
     "home",
     "skills",
@@ -157,57 +258,74 @@ export const Sidebar = () => {
   const isHomeVisible = useSectionVisible("home");
 
   return (
-    <aside className="sticky top-3 ml-3 hidden h-[calc(100vh-24px)] w-[17rem] flex-col overflow-y-auto rounded-[28px] border border-slate-800 bg-slate-950/50 p-5 shadow-2xl backdrop-blur-xl lg:flex xl:w-[18rem]">
-      <NavigationHeader showAvatar={!isHomeVisible} />
+    <>
+      <div
+        aria-hidden="true"
+        className="hidden shrink-0 lg:block w-[calc(17rem+0.75rem)] xl:w-[calc(18rem+0.75rem)]"
+      />
+      <aside className="theme-panel fixed left-3 top-3 z-10 hidden h-[calc(100vh-24px)] w-[17rem] flex-col overflow-y-auto rounded-[28px] p-5 lg:flex xl:w-[18rem]">
+        <NavigationHeader showAvatar={!isHomeVisible} />
 
-      <nav className="flex-1 space-y-1.5">
-        {navLinks.map((link, index) => {
-          const isActive = activeSection === link.id;
-          const Icon = link.icon;
-          return (
-            <a
-              key={index}
-              href={link.href}
-              className={`group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-[15px] transition-all ${
-                isActive
-                  ? "bg-blue-600 text-white shadow-lg shadow-blue-500/20"
-                  : "text-slate-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <span
-                className={`transition-colors ${isActive ? "text-white" : "group-hover:text-blue-400"}`}
+        <nav className="flex-1 space-y-1.5">
+          {navLinks.map((link, index) => {
+            const isActive = activeSection === link.id;
+            const Icon = link.icon;
+            return (
+              <a
+                key={index}
+                href={link.href}
+                onClick={(event) => navigateToSection(event, link.id)}
+                className={`group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-[15px] transition-all ${
+                  isActive
+                    ? "theme-sidebar-active"
+                    : "theme-body hover:bg-[var(--surface-bg)] hover:text-[var(--text-primary)]"
+                }`}
               >
-                <Icon size={18} />
-              </span>
-              <span className="font-medium">{link.label}</span>
+                <span
+                  className={`transition-colors ${
+                    isActive
+                      ? "text-white"
+                      : "theme-muted group-hover:text-[var(--accent)]"
+                  }`}
+                >
+                  <Icon size={18} />
+                </span>
+                <span className="font-medium">{link.label}</span>
 
-              {isActive && (
-                <motion.div
-                  layoutId="active-dot"
-                  className="absolute right-3.5 h-1.5 w-1.5 rounded-full bg-white"
-                />
-              )}
-            </a>
-          );
-        })}
-      </nav>
+                {isActive && (
+                  <motion.div
+                    layoutId="active-dot"
+                    className="absolute right-3.5 h-1.5 w-1.5 rounded-full bg-white"
+                  />
+                )}
+              </a>
+            );
+          })}
+        </nav>
 
-      <div className="mt-6 border-t border-white/5 pt-5">
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-2.5 text-sm font-medium text-white shadow-lg shadow-blue-500/20 transition-colors hover:bg-blue-500 hover:shadow-blue-500/35"
-        >
-          <FileText size={16} /> Download Resume
-        </a>
-      </div>
-    </aside>
+        <div className="theme-divider mt-6 space-y-2.5 border-t pt-4">
+          <ThemeSettingsButton onClick={() => setThemeDialogOpen(true)} />
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="theme-button-primary flex w-full items-center justify-center gap-2 rounded-xl py-2.5 text-sm font-medium transition-transform hover:-translate-y-0.5"
+          >
+            <FileText size={16} /> Download Resume
+          </a>
+        </div>
+      </aside>
+      <ThemeDialog
+        isOpen={isThemeDialogOpen}
+        onClose={() => setThemeDialogOpen(false)}
+      />
+    </>
   );
 };
 
 export const MobileDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isThemeDialogOpen, setThemeDialogOpen] = useState(false);
   const sectionIds = [
     "home",
     "skills",
@@ -225,9 +343,9 @@ export const MobileDrawer = () => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed left-3 top-3 z-50 rounded-full border border-slate-700 bg-slate-900/80 p-2.5 text-white shadow-lg backdrop-blur-md lg:hidden"
+        className="theme-panel fixed left-3 top-3 z-50 rounded-full p-2.5 lg:hidden"
       >
-        <Menu size={22} />
+        <Menu size={22} className="theme-title" />
       </button>
 
       <AnimatePresence>
@@ -246,7 +364,7 @@ export const MobileDrawer = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed left-3 top-3 z-[70] flex h-fit max-h-[calc(100vh-24px)] w-[78%] max-w-[290px] flex-col rounded-[26px] border border-slate-800 bg-slate-950/95 p-4 shadow-2xl backdrop-blur-2xl lg:hidden"
+              className="theme-panel fixed left-3 top-3 z-[70] flex h-fit max-h-[calc(100vh-24px)] w-[78%] max-w-[290px] flex-col rounded-[26px] p-4 lg:hidden"
             >
               <NavigationHeader
                 showAvatar={!isHomeVisible}
@@ -262,15 +380,21 @@ export const MobileDrawer = () => {
                       <a
                         key={index}
                         href={link.href}
-                        onClick={() => setIsOpen(false)}
+                        onClick={(event) =>
+                          navigateToSection(event, link.id, () => setIsOpen(false))
+                        }
                         className={`group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm transition-all ${
                           isActive
-                            ? "bg-blue-600 text-white shadow-lg shadow-blue-500/20"
-                            : "text-slate-400 hover:text-white hover:bg-white/5"
+                            ? "theme-sidebar-active"
+                            : "theme-body hover:bg-[var(--surface-bg)] hover:text-[var(--text-primary)]"
                         }`}
                       >
                         <span
-                          className={`transition-colors ${isActive ? "text-white" : "group-hover:text-blue-400"}`}
+                          className={`transition-colors ${
+                            isActive
+                              ? "text-white"
+                              : "theme-muted group-hover:text-[var(--accent)]"
+                          }`}
                         >
                           <Icon size={17} />
                         </span>
@@ -287,12 +411,15 @@ export const MobileDrawer = () => {
                   })}
                 </nav>
 
-                <div className="border-t border-white/5 pb-3 pt-4">
+                <div className="theme-divider space-y-3 border-t pb-3 pt-4">
+                  <ThemeSettingsButton
+                    onClick={() => setThemeDialogOpen(true)}
+                  />
                   <a
                     href="/resume.pdf"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-colors hover:bg-blue-500 active:scale-95"
+                    className="theme-button-primary flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-transform active:scale-95"
                   >
                     <FileText size={16} /> Download Resume
                   </a>
@@ -302,6 +429,10 @@ export const MobileDrawer = () => {
           </>
         )}
       </AnimatePresence>
+      <ThemeDialog
+        isOpen={isThemeDialogOpen}
+        onClose={() => setThemeDialogOpen(false)}
+      />
     </>
   );
 };
