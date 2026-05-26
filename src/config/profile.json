@@ -136,20 +136,20 @@
   ],
   "experience": [
     {
-      "role": "AI & Full Stack Software Developer",
-      "company": "Xandria Learn",
-      "location": "Applewood Adams Ngong Road, Nairobi",
-      "year": "June 2025—March 2026",
-      "type": "Remote",
-      "description": "AI Integration: Implemented AI workflows using Genkit and Firebase AI Logic.\nPayment Gateway: Integrated Paystack for secure payment collection.\nUI/UX Implementation: Built UI using Material Design 3.\nTechnical Leadership: Led architecture planning sessions.\nAPI Development: Designed and implemented RESTful APIs using Node.js and Firebase Cloud Functions to support web client applications."
-    },
-    {
       "role": "Full Stack Software Developer",
       "company": "Arkcess Care",
       "location": "Perris, California, United States",
       "year": "January 2024—Present",
       "type": "Remote - Full-time",
       "description": "Cross-Platform Development: Engineered responsive Flutter applications with unified codebases for web platforms.\nFirebase Integration: Implemented comprehensive backend solutions using Firebase services including Authentication, Firestore, and Cloud Functions to create scalable and secure applications.\nAI Integration: Leveraged Google's Gemini AI developer API, implementing server-side AI services with Node.js, including resume summary generation. Developed \"Ajira,\" a suite of intelligent agents equipped with tools designed to streamline user onboarding and enhance overall platform process efficiency.\nPayment Gateway: Integrated Stripe financial services such as invoicing, subscription, and one-time checkout, ensuring secure payment in our web app.\nUI/UX Implementation: Translated wireframes and design mockups into user interfaces using Flutter's widget system.\nTechnical Leadership: Led architecture planning sessions and provided guidance to fellow developers on Flutter best practices and state management approaches.\nAPI Development: Designed and implemented RESTful APIs using Node.js and Firebase Cloud Functions to support web client applications.\nPerformance Optimization: Conducted code reviews and performance profiling to identify and resolve bottlenecks, improving application load and streaming time.\nUser Support Systems: Created in-app feedback mechanisms and analytics integrations to gather user insights and prioritize feature development.\nCI/CD Pipeline Management: Established automated testing and deployment workflows to ensure consistent quality across all application releases."
+    },
+    {
+      "role": "AI & Full Stack Software Developer",
+      "company": "Xandria Learn",
+      "location": "Applewood Adams Ngong Road, Nairobi",
+      "year": "June 2025—March 2026",
+      "type": "Remote",
+      "description": "AI Integration: Implemented AI workflows using Genkit and Firebase AI Logic.\nPayment Gateway: Integrated Paystack for secure payment collection.\nUI/UX Implementation: Built UI using Material Design 3.\nTechnical Leadership: Led architecture planning sessions.\nAPI Development: Designed and implemented RESTful APIs using Node.js and Firebase Cloud Functions to support web client applications."
     },
     {
       "role": "Native Android Developer (Seasonal)",
