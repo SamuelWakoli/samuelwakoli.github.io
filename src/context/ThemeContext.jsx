@@ -17,18 +17,18 @@ const getSystemTheme = () => {
 };
 
 const resolveTheme = (theme) =>
-  theme === "system" ? getSystemTheme() : theme ?? "system";
+  theme === "system" ? getSystemTheme() : theme ?? "dark";
 
 const readStoredTheme = () => {
-  if (typeof window === "undefined") return "system";
+  if (typeof window === "undefined") return "dark";
 
   try {
     const storedTheme = window.localStorage.getItem(STORAGE_KEY);
     return storedTheme === "light" || storedTheme === "dark"
       ? storedTheme
-      : "system";
+      : "dark";
   } catch {
-    return "system";
+    return "dark";
   }
 };
 
@@ -47,12 +47,12 @@ const applyTheme = (theme) => {
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    if (typeof document === "undefined") return "system";
+    if (typeof document === "undefined") return "dark";
 
     const datasetTheme = document.documentElement.dataset.themePreference;
     return datasetTheme === "light" || datasetTheme === "dark"
       ? datasetTheme
-      : "system";
+      : "dark";
   });
   const [resolvedTheme, setResolvedTheme] = useState(() => {
     if (typeof document === "undefined") return "dark";

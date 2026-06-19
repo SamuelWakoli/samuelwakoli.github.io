@@ -82,7 +82,7 @@
           const theme =
             storedTheme === "light" || storedTheme === "dark"
               ? storedTheme
-              : "system";
+              : "dark";
           const resolvedTheme =
             theme === "system"
               ? window.matchMedia(mediaQuery).matches
@@ -95,7 +95,7 @@
           root.style.colorScheme = resolvedTheme;
         } catch {
           document.documentElement.dataset.theme = "dark";
-          document.documentElement.dataset.themePreference = "system";
+          document.documentElement.dataset.themePreference = "dark";
           document.documentElement.style.colorScheme = "dark";
         }
       })();
