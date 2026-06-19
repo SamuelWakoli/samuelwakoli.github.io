@@ -67,7 +67,7 @@
     />
     <meta name="twitter:site" content="@samuelwakoli" />
     <meta name="twitter:creator" content="@samuelwakoli" />
-    <script type="module" crossorigin src="/assets/index-Nm1SsQ73.js"></script>
+    <script type="module" crossorigin src="/assets/index-Dqb1kl5l.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CySSakMG.css">
   </head>
 
@@ -84,7 +84,7 @@
           const theme =
             storedTheme === "light" || storedTheme === "dark"
               ? storedTheme
-              : "system";
+              : "dark";
           const resolvedTheme =
             theme === "system"
               ? window.matchMedia(mediaQuery).matches
@@ -97,7 +97,7 @@
           root.style.colorScheme = resolvedTheme;
         } catch {
           document.documentElement.dataset.theme = "dark";
-          document.documentElement.dataset.themePreference = "system";
+          document.documentElement.dataset.themePreference = "dark";
           document.documentElement.style.colorScheme = "dark";
         }
       })();
